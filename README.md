@@ -10,36 +10,47 @@ The Weather Icons used in this module are created and maintained by Erik Flowers
 
 Requires FOSHKplugin http address http://ipaddress:port/observations/ as apiBase
 
-Your Station ID.
-
+## to install:
+```
+cd ~/MagicMirror/modules # adapt directory if you are using a different one
+git clone https://github.com/git-olicat/MMM-WunderGround-PWS-Observations
+cd MMM-WunderGround-PWS-Observations
+npm install
+```
 <img src ="https://github.com/saabman/MMM-WunderGround-PWS-Observations/blob/main/Screen%20Shot%202021-01-26%20at%2021.42.46.png">
-{
 
-    module: 'MMM-WunderGround-PWS-Observations',
-    
-    position: 'top_right',
-    config: {
-    
-        apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.178.100:8080/observations/
-        apikey: '',
-        pws: 'PWSid', //
-        roundTmpDecs:1,
-        sysstat: 0,
-        debug: 1,
-        currentweather: 1,
-        wind: 1,
-        humidity: 1,
-        UV: 0,
-        rain: 1,
-        rainRate: 1,
-        pressure: 1,
-        dewPoint: 1,
-        windChill: 1,
-        heatIndex: 1,
-        temperature: 1,
+After installation you have to configure the modul within the modules section of config.js (just before the "]":
+```
+cd ~/MagicMirror/config # adapt directory if you are using a different one
+vi config.js // or use your favourite editor
+```
+Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g. http://192.168.178.100:8080/observations/)
 
-    }
-},
+			{
+				module: 'MMM-WunderGround-PWS-Observations',
+
+				position: 'top_right',
+				config: {
+
+					apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.178.100:8080/observations/
+					apikey: 'apiKey',
+					pws: 'PWSid',
+					roundTmpDecs:1,
+					sysstat: 0,
+					debug: 1,
+					currentweather: 1,
+					wind: 1,
+					humidity: 1,
+					UV: 0,
+					rain: 1,
+					rainRate: 1,
+					pressure: 1,
+					dewPoint: 1,
+					windChill: 1,
+					heatIndex: 1,
+					temperature: 1,
+				}
+			},
 
 ## Configuration options
 

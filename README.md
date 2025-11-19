@@ -8,7 +8,7 @@ I decided to cut it down to just the data provided from your local PWS.
 The Weather Icons used in this module are created and maintained by Erik Flowers. v1.0 artwork by Lukas Bischoff. v1.1 - 2.0 artwork by Erik Flowers www.weathericons.io
 
 
-Requires FOSHKplugin http address http://ipaddress:port as apiBase
+Requires FOSHKplugin http address http://ipaddress:port/observations/ as apiBase
 
 Your Station ID.
 

@@ -18,10 +18,10 @@ Module.register("MMM-WunderGround-PWS-Observations", {
         lang: config.language,
         showWindDirection: true,
         retryDelay: 2500,
-        apiBase: "https://api.weather.com/v2/pws/observations/",
+        apiBase: "",
         socknot: "GET_WUNDERGROUND",
-		sockrcv: "WUNDERGROUND",
-		wind: 1,	//1 displays the parameters 0 hides it
+        sockrcv: "WUNDERGROUND",
+        wind: 1,	//1 displays the parameters 0 hides it
         humidity: 1,
         UV: 0,
         rain: 1,
@@ -31,7 +31,7 @@ Module.register("MMM-WunderGround-PWS-Observations", {
         windChill: 1,
         heatIndex: 1,
         temperature: 1,
-        },
+    },
         
     // Define required translations.
     getTranslations: function() {
@@ -92,6 +92,13 @@ Module.register("MMM-WunderGround-PWS-Observations", {
         
 
         
+        if (this.config.apiBase === "") {
+            wrapper.innerHTML = this.translate("APIBASE") + this.name +
+                ".";
+            wrapper.className = "dimmed light small";
+            return wrapper;
+        }
+
         if (this.config.apikey === "") {
             wrapper.innerHTML = this.translate("APIKEY") + this.name +
                 ".";

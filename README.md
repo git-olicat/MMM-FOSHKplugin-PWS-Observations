@@ -19,6 +19,7 @@ Your Station ID.
     position: 'top_right',
     config: {
     
+        apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.178.100:8080/observations/
         apikey: '',
         pws: 'PWSid', //
         roundTmpDecs:1,

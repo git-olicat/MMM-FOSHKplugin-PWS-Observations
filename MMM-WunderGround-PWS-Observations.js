@@ -14,7 +14,7 @@ Module.register("MMM-WunderGround-PWS-Observations", {
         apikey: "", //Your private api key available from Wunderground.com [member settings / API Key]
         pws: "", //Your Station ID
         units: config.units,
-        updateInterval: 10 * 60 * 1000, // every 10 minutes
+        updateInterval: 1 * 60 * 1000, // every 1 minute
         lang: config.language,
         showWindDirection: true,
         retryDelay: 2500,
@@ -33,7 +33,7 @@ Module.register("MMM-WunderGround-PWS-Observations", {
         temperature: 1,
         
         // Oliver 19.11.25
-        solarradiation: 0,
+        solarRadiation: 0,
         indoorHumidity: 0,
         indoorTemperature: 0,
         temperature1: 0,       // WH31 channel #1
@@ -395,7 +395,7 @@ Module.register("MMM-WunderGround-PWS-Observations", {
       this.rainfall = data.observations[0][this.config.units].precipTotal;
 
       // Oliver, 19.11.25
-      this.solarradiation = data.observations[0].solarradiation;
+      this.solarRadiation = data.observations[0].solarRadiation;
       
       this.indoorHumidity = data.observations[0].indoorHumidity;
       this.indoorTemperature = data.observations[0][this.config.units].indoorTemp;
@@ -449,7 +449,7 @@ Module.register("MMM-WunderGround-PWS-Observations", {
       
       this.loaded = true;
       this.updateDom(this.config.animationSpeed);
-        	
+
     },
     
     /* deg2Cardinal(degrees)

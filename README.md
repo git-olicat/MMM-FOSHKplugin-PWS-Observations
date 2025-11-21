@@ -34,9 +34,9 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 				config: {
 
 					apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.178.100:8080/observations/
-					apikey: 'apiKey',
-					pws: 'PWSid',
-					roundTmpDecs:1,
+					pws: 'FOSHKplugin',		// this enables optional keys to be transferred
+					apikey: 'MMM',			// needed for optional keys
+					roundTmpDecs: 1,
 					sysstat: 0,
 					debug: 1,
 					currentweather: 1,

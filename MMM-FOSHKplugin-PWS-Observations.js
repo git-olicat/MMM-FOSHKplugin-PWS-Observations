@@ -225,6 +225,16 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var row38_sitrep = document.createElement("tr");
     var row39_sitrep = document.createElement("tr");
     var row40_sitrep = document.createElement("tr");
+    var row41_sitrep = document.createElement("tr");
+    var row42_sitrep = document.createElement("tr");
+    var row43_sitrep = document.createElement("tr");
+    var row44_sitrep = document.createElement("tr");
+    var row45_sitrep = document.createElement("tr");
+    var row46_sitrep = document.createElement("tr");
+    var row47_sitrep = document.createElement("tr");
+    var row48_sitrep = document.createElement("tr");
+    var row49_sitrep = document.createElement("tr");
+    var row50_sitrep = document.createElement("tr");
   
     if (this.config.wind == "1"){
       var windDirectionIcon = document.createElement("td");
@@ -617,7 +627,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row30_sitrep);
     }
     
-    /*
     if (this.config.soilmoisture2 == "1"){
       var soilmoisture2Icon = document.createElement("td");
       soilmoisture2Icon.className = "pop wi wi-hot lpad";
@@ -783,7 +792,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row46_sitrep.appendChild(soilmoisture16Txt);
       table_sitrep.appendChild(row46_sitrep);
     }
-    */
 
 
 

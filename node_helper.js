@@ -23,19 +23,19 @@ module.exports = NodeHelper.create({
     console.log(notification);
     var self = this;
     
-    if(notification === "GET_WUNDERGROUND") {
+    if(notification === "GET_FOSHKPLUGIN") {
       this.config = payload;
       if ( this.config.debug === 1 ) {
         console.log('Lets get FOSHKplugin requested!!!!!');
         console.log(this.config);
       }
       if (!this.fetcherRunning) {
-        this.fetchWunderground();
+        this.fetchFOSHKplugin();
       }
     }
   },
      
-  fetchWunderground: function() {
+  fetchFOSHKplugin: function() {
     var self = this;
     this.fetcherRunning = true; 
     
@@ -71,14 +71,14 @@ module.exports = NodeHelper.create({
     function(error, response, body) {
       if (!error && response.statusCode == 200) {
         this.wunderPayload = body;
-        // console.log(moment().format() + " 5 " + self.name + ": " + body);
-        self.sendSocketNotification('WUNDERGROUND',body);
+        if ( this.config.debug === 1 ) { console.log(moment().format() + " 5 " + self.name + ": " + body); }
+        self.sendSocketNotification('FOSHKPLUGIN',body);
       } else {
         console.log(moment().format() + " 6 " + self.name + ": " + error);
       }
 
       setTimeout(function() {
-        self.fetchWunderground();
+        self.fetchFOSHKplugin();
       }, 
       self.config.updateInterval
 

@@ -257,7 +257,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row1_sitrep);
     }
   
-    if (this.config.humidity == "1"){ 
+    if (this.config.humidity == "1"){
       var HumidityIcon = document.createElement("td");
       HumidityIcon.className = "pop wi wi-humidity lpad";
       row2_sitrep.appendChild(HumidityIcon);
@@ -377,7 +377,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     }
     
     // Oliver, 22.11.25 - what about rows?
-    if (this.config.solarRadiation == "1"){ 
+    if (this.config.solarRadiation == "1"){
       var solarRadiationIcon = document.createElement("td");
       solarRadiationIcon.className = "pop wi wi-hot lpad";
       row11_sitrep.appendChild(solarRadiationIcon);
@@ -389,7 +389,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row11_sitrep);
     }
 
-    if (this.config.indoorHumidity == "1"){ 
+    if (this.config.indoorHumidity == "1"){
       var indoorHumidityIcon = document.createElement("td");
       indoorHumidityIcon.className = "pop wi wi-humidity lpad";
       row12_sitrep.appendChild(indoorHumidityIcon);
@@ -413,7 +413,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row13_sitrep);
     }
 
-    if (this.config.Humidity1 == "1"){ 
+    if (this.config.Humidity1 == "1"){
       var indoorHumidity1Icon = document.createElement("td");
       indoorHumidity1Icon.className = "pop wi wi-humidity lpad";
       row14_sitrep.appendChild(indoorHumidity1Icon);
@@ -437,7 +437,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row15_sitrep);
     }
 
-    if (this.config.Humidity2 == "1"){ 
+    if (this.config.Humidity2 == "1"){
       var indoorHumidity2Icon = document.createElement("td");
       indoorHumidity2Icon.className = "pop wi wi-humidity lpad";
       row16_sitrep.appendChild(indoorHumidity2Icon);
@@ -461,7 +461,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row17_sitrep);
     }
 
-    if (this.config.Humidity3 == "1"){ 
+    if (this.config.Humidity3 == "1"){
       var indoorHumidity3Icon = document.createElement("td");
       indoorHumidity3Icon.className = "pop wi wi-humidity lpad";
       row18_sitrep.appendChild(indoorHumidity3Icon);
@@ -485,7 +485,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row19_sitrep);
     }
 
-    if (this.config.Humidity4 == "1"){ 
+    if (this.config.Humidity4 == "1"){
       var indoorHumidity4Icon = document.createElement("td");
       indoorHumidity4Icon.className = "pop wi wi-humidity lpad";
       row20_sitrep.appendChild(indoorHumidity4Icon);
@@ -509,7 +509,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row21_sitrep);
     }
 
-    if (this.config.Humidity5 == "1"){ 
+    if (this.config.Humidity5 == "1"){
       var indoorHumidity5Icon = document.createElement("td");
       indoorHumidity5Icon.className = "pop wi wi-humidity lpad";
       row22_sitrep.appendChild(indoorHumidity5Icon);
@@ -533,7 +533,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row23_sitrep);
     }
 
-    if (this.config.Humidity6 == "1"){ 
+    if (this.config.Humidity6 == "1"){
       var indoorHumidity6Icon = document.createElement("td");
       indoorHumidity6Icon.className = "pop wi wi-humidity lpad";
       row24_sitrep.appendChild(indoorHumidity6Icon);
@@ -557,7 +557,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row25_sitrep);
     }
 
-    if (this.config.Humidity7 == "1"){ 
+    if (this.config.Humidity7 == "1"){
       var indoorHumidity7Icon = document.createElement("td");
       indoorHumidity7Icon.className = "pop wi wi-humidity lpad";
       row26_sitrep.appendChild(indoorHumidity7Icon);
@@ -581,7 +581,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row27_sitrep);
     }
 
-    if (this.config.Humidity8 == "1"){ 
+    if (this.config.Humidity8 == "1"){
       var indoorHumidity8Icon = document.createElement("td");
       indoorHumidity8Icon.className = "pop wi wi-humidity lpad";
       row28_sitrep.appendChild(indoorHumidity8Icon);
@@ -605,7 +605,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row29_sitrep);
     }
 
-    if (this.config.soilmoisture == "1"){ 
+    if (this.config.soilmoisture == "1"){
       var soilmoistureIcon = document.createElement("td");
       soilmoistureIcon.className = "pop wi wi-hot lpad";
       row30_sitrep.appendChild(soilmoistureIcon);
@@ -616,7 +616,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row30_sitrep.appendChild(soilmoistureTxt);
       table_sitrep.appendChild(row30_sitrep);
     }
-    if (this.config.soilmoisture2 == "1"){ 
+    
+    /*
+    if (this.config.soilmoisture2 == "1"){
       var soilmoisture2Icon = document.createElement("td");
       soilmoisture2Icon.className = "pop wi wi-hot lpad";
       row31_sitrep.appendChild(soilmoisture2Icon);
@@ -627,7 +629,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row31_sitrep.appendChild(soilmoisture2Txt);
       table_sitrep.appendChild(row31_sitrep);
     }
-    if (this.config.soilmoisture3 == "1"){ 
+    if (this.config.soilmoisture3 == "1"){
       var soilmoisture3Icon = document.createElement("td");
       soilmoisture3Icon.className = "pop wi wi-hot lpad";
       row32_sitrep.appendChild(soilmoisture3Icon);
@@ -638,7 +640,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row33_sitrep.appendChild(soilmoisture3Txt);
       table_sitrep.appendChild(row33_sitrep);
     }
-    if (this.config.soilmoisture4 == "1"){ 
+    if (this.config.soilmoisture4 == "1"){
       var soilmoisture4Icon = document.createElement("td");
       soilmoisture4Icon.className = "pop wi wi-hot lpad";
       row34_sitrep.appendChild(soilmoisture4Icon);
@@ -649,7 +651,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row34_sitrep.appendChild(soilmoisture4Txt);
       table_sitrep.appendChild(row34_sitrep);
     }
-    if (this.config.soilmoisture5 == "1"){ 
+    if (this.config.soilmoisture5 == "1"){
       var soilmoisture5Icon = document.createElement("td");
       soilmoisture5Icon.className = "pop wi wi-hot lpad";
       row35_sitrep.appendChild(soilmoisture5Icon);
@@ -660,7 +662,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row35_sitrep.appendChild(soilmoisture5Txt);
       table_sitrep.appendChild(row35_sitrep);
     }
-    if (this.config.soilmoisture6 == "1"){ 
+    if (this.config.soilmoisture6 == "1"){
       var soilmoisture6Icon = document.createElement("td");
       soilmoisture6Icon.className = "pop wi wi-hot lpad";
       row36_sitrep.appendChild(soilmoisture6Icon);
@@ -671,7 +673,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row36_sitrep.appendChild(soilmoisture6Txt);
       table_sitrep.appendChild(row36_sitrep);
     }
-    if (this.config.soilmoisture7 == "1"){ 
+    if (this.config.soilmoisture7 == "1"){
       var soilmoisture7Icon = document.createElement("td");
       soilmoisture7Icon.className = "pop wi wi-hot lpad";
       row37_sitrep.appendChild(soilmoisture7Icon);
@@ -682,7 +684,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row37_sitrep.appendChild(soilmoisture7Txt);
       table_sitrep.appendChild(row37_sitrep);
     }
-    if (this.config.soilmoisture8 == "1"){ 
+    if (this.config.soilmoisture8 == "1"){
       var soilmoisture8Icon = document.createElement("td");
       soilmoisture8Icon.className = "pop wi wi-hot lpad";
       row35_sitrep.appendChild(soilmoisture8Icon);
@@ -693,7 +695,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row38_sitrep.appendChild(soilmoisture8Txt);
       table_sitrep.appendChild(row38_sitrep);
     }
-    if (this.config.soilmoisture9 == "1"){ 
+    if (this.config.soilmoisture9 == "1"){
       var soilmoisture9Icon = document.createElement("td");
       soilmoisture9Icon.className = "pop wi wi-hot lpad";
       row39_sitrep.appendChild(soilmoisture9Icon);
@@ -704,7 +706,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row39_sitrep.appendChild(soilmoisture9Txt);
       table_sitrep.appendChild(row39_sitrep);
     }
-    if (this.config.soilmoisture10 == "1"){ 
+    if (this.config.soilmoisture10 == "1"){
       var soilmoisture10Icon = document.createElement("td");
       soilmoisture10Icon.className = "pop wi wi-hot lpad";
       row40_sitrep.appendChild(soilmoisture10Icon);
@@ -715,7 +717,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row40_sitrep.appendChild(soilmoisture10Txt);
       table_sitrep.appendChild(row40_sitrep);
     }
-    if (this.config.soilmoisture11 == "1"){ 
+    if (this.config.soilmoisture11 == "1"){
       var soilmoisture11Icon = document.createElement("td");
       soilmoisture11Icon.className = "pop wi wi-hot lpad";
       row41_sitrep.appendChild(soilmoisture11Icon);
@@ -726,7 +728,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row41_sitrep.appendChild(soilmoisture11Txt);
       table_sitrep.appendChild(row41_sitrep);
     }
-    if (this.config.soilmoisture12 == "1"){ 
+    if (this.config.soilmoisture12 == "1"){
       var soilmoisture12Icon = document.createElement("td");
       soilmoisture12Icon.className = "pop wi wi-hot lpad";
       row42_sitrep.appendChild(soilmoisture12Icon);
@@ -737,7 +739,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row42_sitrep.appendChild(soilmoisture12Txt);
       table_sitrep.appendChild(row42_sitrep);
     }
-    if (this.config.soilmoisture13 == "1"){ 
+    if (this.config.soilmoisture13 == "1"){
       var soilmoisture13Icon = document.createElement("td");
       soilmoisture13Icon.className = "pop wi wi-hot lpad";
       row43_sitrep.appendChild(soilmoisture13Icon);
@@ -748,7 +750,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row43_sitrep.appendChild(soilmoisture13Txt);
       table_sitrep.appendChild(row43_sitrep);
     }
-    if (this.config.soilmoisture14 == "1"){ 
+    if (this.config.soilmoisture14 == "1"){
       var soilmoisture14Icon = document.createElement("td");
       soilmoisture14Icon.className = "pop wi wi-hot lpad";
       row44_sitrep.appendChild(soilmoisture14Icon);
@@ -759,7 +761,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row44_sitrep.appendChild(soilmoisture14Txt);
       table_sitrep.appendChild(row44_sitrep);
     }
-    if (this.config.soilmoisture15 == "1"){ 
+    if (this.config.soilmoisture15 == "1"){
       var soilmoisture15Icon = document.createElement("td");
       soilmoisture15Icon.className = "pop wi wi-hot lpad";
       row45_sitrep.appendChild(soilmoisture15Icon);
@@ -770,7 +772,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row45_sitrep.appendChild(soilmoisture15Txt);
       table_sitrep.appendChild(row45_sitrep);
     }
-    if (this.config.soilmoisture16 == "1"){ 
+    if (this.config.soilmoisture16 == "1"){
       var soilmoisture16Icon = document.createElement("td");
       soilmoisture16Icon.className = "pop wi wi-hot lpad";
       row46_sitrep.appendChild(soilmoisture16Icon);
@@ -781,7 +783,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row46_sitrep.appendChild(soilmoisture16Txt);
       table_sitrep.appendChild(row46_sitrep);
     }
-
+    */
 
 
 

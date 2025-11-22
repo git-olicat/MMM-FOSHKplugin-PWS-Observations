@@ -235,6 +235,16 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var row48_sitrep = document.createElement("tr");
     var row49_sitrep = document.createElement("tr");
     var row50_sitrep = document.createElement("tr");
+    var row51_sitrep = document.createElement("tr");
+    var row52_sitrep = document.createElement("tr");
+    var row53_sitrep = document.createElement("tr");
+    var row54_sitrep = document.createElement("tr");
+    var row55_sitrep = document.createElement("tr");
+    var row56_sitrep = document.createElement("tr");
+    var row57_sitrep = document.createElement("tr");
+    var row58_sitrep = document.createElement("tr");
+    var row59_sitrep = document.createElement("tr");
+    var row60_sitrep = document.createElement("tr");
   
     if (this.config.wind == "1"){
       var windDirectionIcon = document.createElement("td");
@@ -638,6 +648,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row31_sitrep.appendChild(soilmoisture2Txt);
       table_sitrep.appendChild(row31_sitrep);
     }
+
     if (this.config.soilmoisture3 == "1"){
       var soilmoisture3Icon = document.createElement("td");
       soilmoisture3Icon.className = "pop wi wi-hot lpad";
@@ -646,161 +657,290 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soilmoisture3Txt = document.createElement("td");
       soilmoisture3Txt.className = "popr";
       soilmoisture3Txt.innerHTML = this.soilmoisture3 + "%";
-      row33_sitrep.appendChild(soilmoisture3Txt);
-      table_sitrep.appendChild(row33_sitrep);
+      row32_sitrep.appendChild(soilmoisture3Txt);
+      table_sitrep.appendChild(row32_sitrep);
     }
+
     if (this.config.soilmoisture4 == "1"){
       var soilmoisture4Icon = document.createElement("td");
       soilmoisture4Icon.className = "pop wi wi-hot lpad";
-      row34_sitrep.appendChild(soilmoisture4Icon);
+      row33_sitrep.appendChild(soilmoisture4Icon);
 
       var soilmoisture4Txt = document.createElement("td");
       soilmoisture4Txt.className = "popr";
       soilmoisture4Txt.innerHTML = this.soilmoisture4 + "%";
-      row34_sitrep.appendChild(soilmoisture4Txt);
-      table_sitrep.appendChild(row34_sitrep);
+      row33_sitrep.appendChild(soilmoisture4Txt);
+      table_sitrep.appendChild(row33_sitrep);
     }
     if (this.config.soilmoisture5 == "1"){
       var soilmoisture5Icon = document.createElement("td");
       soilmoisture5Icon.className = "pop wi wi-hot lpad";
-      row35_sitrep.appendChild(soilmoisture5Icon);
+      row34_sitrep.appendChild(soilmoisture5Icon);
 
       var soilmoisture5Txt = document.createElement("td");
       soilmoisture5Txt.className = "popr";
       soilmoisture5Txt.innerHTML = this.soilmoisture5 + "%";
-      row35_sitrep.appendChild(soilmoisture5Txt);
-      table_sitrep.appendChild(row35_sitrep);
+      row34_sitrep.appendChild(soilmoisture5Txt);
+      table_sitrep.appendChild(row34_sitrep);
     }
     if (this.config.soilmoisture6 == "1"){
       var soilmoisture6Icon = document.createElement("td");
       soilmoisture6Icon.className = "pop wi wi-hot lpad";
-      row36_sitrep.appendChild(soilmoisture6Icon);
+      row35_sitrep.appendChild(soilmoisture6Icon);
 
       var soilmoisture6Txt = document.createElement("td");
       soilmoisture6Txt.className = "popr";
       soilmoisture6Txt.innerHTML = this.soilmoisture6 + "%";
-      row36_sitrep.appendChild(soilmoisture6Txt);
-      table_sitrep.appendChild(row36_sitrep);
+      row35_sitrep.appendChild(soilmoisture6Txt);
+      table_sitrep.appendChild(row35_sitrep);
     }
     if (this.config.soilmoisture7 == "1"){
       var soilmoisture7Icon = document.createElement("td");
       soilmoisture7Icon.className = "pop wi wi-hot lpad";
-      row37_sitrep.appendChild(soilmoisture7Icon);
+      row36_sitrep.appendChild(soilmoisture7Icon);
 
       var soilmoisture7Txt = document.createElement("td");
       soilmoisture7Txt.className = "popr";
       soilmoisture7Txt.innerHTML = this.soilmoisture7 + "%";
-      row37_sitrep.appendChild(soilmoisture7Txt);
-      table_sitrep.appendChild(row37_sitrep);
+      row36_sitrep.appendChild(soilmoisture7Txt);
+      table_sitrep.appendChild(row36_sitrep);
     }
     if (this.config.soilmoisture8 == "1"){
       var soilmoisture8Icon = document.createElement("td");
       soilmoisture8Icon.className = "pop wi wi-hot lpad";
-      row35_sitrep.appendChild(soilmoisture8Icon);
+      row37_sitrep.appendChild(soilmoisture8Icon);
 
       var soilmoisture8Txt = document.createElement("td");
       soilmoisture8Txt.className = "popr";
       soilmoisture8Txt.innerHTML = this.soilmoisture8 + "%";
-      row38_sitrep.appendChild(soilmoisture8Txt);
-      table_sitrep.appendChild(row38_sitrep);
+      row37_sitrep.appendChild(soilmoisture8Txt);
+      table_sitrep.appendChild(row37_sitrep);
     }
     if (this.config.soilmoisture9 == "1"){
       var soilmoisture9Icon = document.createElement("td");
       soilmoisture9Icon.className = "pop wi wi-hot lpad";
-      row39_sitrep.appendChild(soilmoisture9Icon);
+      row38_sitrep.appendChild(soilmoisture9Icon);
 
       var soilmoisture9Txt = document.createElement("td");
       soilmoisture9Txt.className = "popr";
       soilmoisture9Txt.innerHTML = this.soilmoisture9 + "%";
-      row39_sitrep.appendChild(soilmoisture9Txt);
-      table_sitrep.appendChild(row39_sitrep);
+      row38_sitrep.appendChild(soilmoisture9Txt);
+      table_sitrep.appendChild(row38_sitrep);
     }
     if (this.config.soilmoisture10 == "1"){
       var soilmoisture10Icon = document.createElement("td");
       soilmoisture10Icon.className = "pop wi wi-hot lpad";
-      row40_sitrep.appendChild(soilmoisture10Icon);
+      row39_sitrep.appendChild(soilmoisture10Icon);
 
       var soilmoisture10Txt = document.createElement("td");
       soilmoisture10Txt.className = "popr";
       soilmoisture10Txt.innerHTML = this.soilmoisture10 + "%";
-      row40_sitrep.appendChild(soilmoisture10Txt);
-      table_sitrep.appendChild(row40_sitrep);
+      row39_sitrep.appendChild(soilmoisture10Txt);
+      table_sitrep.appendChild(row39_sitrep);
     }
     if (this.config.soilmoisture11 == "1"){
       var soilmoisture11Icon = document.createElement("td");
       soilmoisture11Icon.className = "pop wi wi-hot lpad";
-      row41_sitrep.appendChild(soilmoisture11Icon);
+      row40_sitrep.appendChild(soilmoisture11Icon);
 
       var soilmoisture11Txt = document.createElement("td");
       soilmoisture11Txt.className = "popr";
       soilmoisture11Txt.innerHTML = this.soilmoisture11 + "%";
-      row41_sitrep.appendChild(soilmoisture11Txt);
-      table_sitrep.appendChild(row41_sitrep);
+      row40_sitrep.appendChild(soilmoisture11Txt);
+      table_sitrep.appendChild(row40_sitrep);
     }
     if (this.config.soilmoisture12 == "1"){
       var soilmoisture12Icon = document.createElement("td");
       soilmoisture12Icon.className = "pop wi wi-hot lpad";
-      row42_sitrep.appendChild(soilmoisture12Icon);
+      row41_sitrep.appendChild(soilmoisture12Icon);
 
       var soilmoisture12Txt = document.createElement("td");
       soilmoisture12Txt.className = "popr";
       soilmoisture12Txt.innerHTML = this.soilmoisture12 + "%";
-      row42_sitrep.appendChild(soilmoisture12Txt);
-      table_sitrep.appendChild(row42_sitrep);
+      row41_sitrep.appendChild(soilmoisture12Txt);
+      table_sitrep.appendChild(row41_sitrep);
     }
     if (this.config.soilmoisture13 == "1"){
       var soilmoisture13Icon = document.createElement("td");
       soilmoisture13Icon.className = "pop wi wi-hot lpad";
-      row43_sitrep.appendChild(soilmoisture13Icon);
+      row42_sitrep.appendChild(soilmoisture13Icon);
 
       var soilmoisture13Txt = document.createElement("td");
       soilmoisture13Txt.className = "popr";
       soilmoisture13Txt.innerHTML = this.soilmoisture13 + "%";
-      row43_sitrep.appendChild(soilmoisture13Txt);
-      table_sitrep.appendChild(row43_sitrep);
+      row42_sitrep.appendChild(soilmoisture13Txt);
+      table_sitrep.appendChild(row42_sitrep);
     }
     if (this.config.soilmoisture14 == "1"){
       var soilmoisture14Icon = document.createElement("td");
       soilmoisture14Icon.className = "pop wi wi-hot lpad";
-      row44_sitrep.appendChild(soilmoisture14Icon);
+      row43_sitrep.appendChild(soilmoisture14Icon);
 
       var soilmoisture14Txt = document.createElement("td");
       soilmoisture14Txt.className = "popr";
       soilmoisture14Txt.innerHTML = this.soilmoisture14 + "%";
-      row44_sitrep.appendChild(soilmoisture14Txt);
-      table_sitrep.appendChild(row44_sitrep);
+      row43_sitrep.appendChild(soilmoisture14Txt);
+      table_sitrep.appendChild(row43_sitrep);
     }
     if (this.config.soilmoisture15 == "1"){
       var soilmoisture15Icon = document.createElement("td");
       soilmoisture15Icon.className = "pop wi wi-hot lpad";
-      row45_sitrep.appendChild(soilmoisture15Icon);
+      row44_sitrep.appendChild(soilmoisture15Icon);
 
       var soilmoisture15Txt = document.createElement("td");
       soilmoisture15Txt.className = "popr";
       soilmoisture15Txt.innerHTML = this.soilmoisture15 + "%";
-      row45_sitrep.appendChild(soilmoisture15Txt);
-      table_sitrep.appendChild(row45_sitrep);
+      row44_sitrep.appendChild(soilmoisture15Txt);
+      table_sitrep.appendChild(row44_sitrep);
     }
     if (this.config.soilmoisture16 == "1"){
       var soilmoisture16Icon = document.createElement("td");
       soilmoisture16Icon.className = "pop wi wi-hot lpad";
-      row46_sitrep.appendChild(soilmoisture16Icon);
+      row45_sitrep.appendChild(soilmoisture16Icon);
 
       var soilmoisture16Txt = document.createElement("td");
       soilmoisture16Txt.className = "popr";
       soilmoisture16Txt.innerHTML = this.soilmoisture16 + "%";
-      row46_sitrep.appendChild(soilmoisture16Txt);
-      table_sitrep.appendChild(row46_sitrep);
+      row45_sitrep.appendChild(soilmoisture16Txt);
+      table_sitrep.appendChild(row45_sitrep);
     }
 
 
+    if (this.config.soiltemp == "1"){
+      var soiltempIcon = document.createElement("td");
+      soiltempIcon.className = "pop wi wi-thermometer-exterior";
+      row46_sitrep.appendChild(soiltempIcon);
+    
+      var soiltemp = document.createElement("td");
+      soiltemp.className = "popr";
+      soiltemp.innerHTML = " " + this.soiltemp + "&deg;";
+      row46_sitrep.appendChild(soiltemp);
+      table_sitrep.appendChild(row46_sitrep);
+    }
 
+    if (this.config.soiltemp2 == "1"){
+      var soiltemp2Icon = document.createElement("td");
+      soiltemp2Icon.className = "pop wi wi-thermometer-exterior";
+      row47_sitrep.appendChild(soiltemp2Icon);
+    
+      var soil2temp = document.createElement("td");
+      soiltemp2.className = "popr";
+      soiltemp2.innerHTML = " " + this.soiltemp2 + "&deg;";
+      row47_sitrep.appendChild(soiltemp2);
+      table_sitrep.appendChild(row47_sitrep);
+    }
 
+    if (this.config.soiltemp3 == "1"){
+      var soiltemp3Icon = document.createElement("td");
+      soiltemp3Icon.className = "pop wi wi-thermometer-exterior";
+      row48_sitrep.appendChild(soiltemp3Icon);
+    
+      var soil3temp = document.createElement("td");
+      soiltemp3.className = "popr";
+      soiltemp3.innerHTML = " " + this.soiltemp3 + "&deg;";
+      row48_sitrep.appendChild(soiltemp3);
+      table_sitrep.appendChild(row48_sitrep);
+    }
 
+    if (this.config.soiltemp4 == "1"){
+      var soiltemp4Icon = document.createElement("td");
+      soiltemp4Icon.className = "pop wi wi-thermometer-exterior";
+      row49_sitrep.appendChild(soiltemp4Icon);
+    
+      var soil4temp = document.createElement("td");
+      soiltemp4.className = "popr";
+      soiltemp4.innerHTML = " " + this.soiltemp4 + "&deg;";
+      row49_sitrep.appendChild(soiltemp4);
+      table_sitrep.appendChild(row49_sitrep);
+    }
 
+    if (this.config.soiltemp5 == "1"){
+      var soiltemp5Icon = document.createElement("td");
+      soiltemp5Icon.className = "pop wi wi-thermometer-exterior";
+      row50_sitrep.appendChild(soiltemp5Icon);
+    
+      var soil5temp = document.createElement("td");
+      soiltemp5.className = "popr";
+      soiltemp5.innerHTML = " " + this.soiltemp5 + "&deg;";
+      row50_sitrep.appendChild(soiltemp5);
+      table_sitrep.appendChild(row50_sitrep);
+    }
 
+    if (this.config.soiltemp6 == "1"){
+      var soiltemp6Icon = document.createElement("td");
+      soiltemp6Icon.className = "pop wi wi-thermometer-exterior";
+      row51_sitrep.appendChild(soiltemp6Icon);
+    
+      var soil6temp = document.createElement("td");
+      soiltemp6.className = "popr";
+      soiltemp6.innerHTML = " " + this.soiltemp6 + "&deg;";
+      row51_sitrep.appendChild(soiltemp6);
+      table_sitrep.appendChild(row51_sitrep);
+    }
 
+    if (this.config.soiltemp7 == "1"){
+      var soiltemp7Icon = document.createElement("td");
+      soiltemp7Icon.className = "pop wi wi-thermometer-exterior";
+      row52_sitrep.appendChild(soiltemp7Icon);
+    
+      var soil7temp = document.createElement("td");
+      soiltemp7.className = "popr";
+      soiltemp7.innerHTML = " " + this.soiltemp7 + "&deg;";
+      row52_sitrep.appendChild(soiltemp7);
+      table_sitrep.appendChild(row52_sitrep);
+    }
 
+    if (this.config.soiltemp8 == "1"){
+      var soiltemp8Icon = document.createElement("td");
+      soiltemp8Icon.className = "pop wi wi-thermometer-exterior";
+      row53_sitrep.appendChild(soiltemp8Icon);
+    
+      var soil8temp = document.createElement("td");
+      soiltemp8.className = "popr";
+      soiltemp8.innerHTML = " " + this.soiltemp8 + "&deg;";
+      row53_sitrep.appendChild(soiltemp8);
+      table_sitrep.appendChild(row53_sitrep);
+    }
+
+    if (this.config.lightning_time == "1"){
+      var lightning_timeIcon = document.createElement("td");
+      lightning_timeIcon.className = "pop wi wi-lightning";
+      row54_sitrep.appendChild(lightning_timeIcon);
+    
+      var lightning_time = document.createElement("td");
+      lightning_time.className = "popr";
+      lightning_time.innerHTML = " " + this.lightning_time + "oli";
+      row54_sitrep.appendChild(lightning_time);
+      table_sitrep.appendChild(row54_sitrep);
+    }
+
+    if (this.config.lightning_day == "1"){
+      var lightning_dayIcon = document.createElement("td");
+      lightning_dayIcon.className = "pop wi wi-lightning";
+      row55_sitrep.appendChild(lightning_dayIcon);
+    
+      var lightning_day = document.createElement("td");
+      lightning_day.className = "popr";
+      lightning_day.innerHTML = " " + this.lightning_time + "";
+      row55_sitrep.appendChild(lightning_day);
+      table_sitrep.appendChild(row55_sitrep);
+    }
+
+    if (this.config.lightning_distance == "1"){
+      var lightning_distanceIcon = document.createElement("td");
+      lightning_distanceIcon.className = "pop wi wi-lightning";
+      row56_sitrep.appendChild(lightning_distanceIcon);
+    
+      var lightning_distance = document.createElement("td");
+      lightning_distance.className = "popr";
+      if (this.config.units == "metric") {
+        lightning_distance.innerHTML = " " + this.lightning_distance + "km";
+      } else {
+        lightning_distance.innerHTML = " " + this.lightning_distance + "mi";
+      }
+      row56_sitrep.appendChild(lightning_distance);
+      table_sitrep.appendChild(row56_sitrep);
+    }
 
 
 

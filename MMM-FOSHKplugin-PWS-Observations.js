@@ -17,8 +17,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     showWindDirection: true,
     retryDelay: 2500,
     apiBase: "",
-    socknot: "GET_FOSHKPLUGIN",
-    sockrcv: "FOSHKPLUGIN",
+    socknot: "GET_WUNDERGROUND",
+    sockrcv: "WUNDERGROUND",
     wind: 1,  //1 displays the parameters 0 hides it
     humidity: 1,
     UV: 0,

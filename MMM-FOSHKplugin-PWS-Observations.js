@@ -17,8 +17,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     showWindDirection: true,
     retryDelay: 2500,
     apiBase: "",
-    socknot: "GET_WUNDERGROUND",
-    sockrcv: "WUNDERGROUND",
+    socknot: "GET_FOSHKPLUGIN",
+    sockrcv: "FOSHKPLUGIN",
     wind: 1,  //1 displays the parameters 0 hides it
     humidity: 1,
     UV: 0,
@@ -113,14 +113,13 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.loaded = false;
     this.error = false;
     this.errorDescription = "";
-    this.getWunder();
+    this.getFOSHKplugin();
   },
       
-  getWunder: function() {
+  getFOSHKplugin: function() {
     if ( this.config.debug === 1 ) {
       Log.info("FOSHKplugin: Getting weather.");
     }
-    //this.sendSocketNotification("GET_WUNDERGROUND", this.config);
     this.sendSocketNotification(this.config.socknot, this.config);
   },
       
@@ -1094,7 +1093,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var self = this;
 
     if ( this.config.debug === 1 ) {
-      Log.info('Wunderground received ' + notification);
+      Log.info('FOSHKplugin received ' + notification);
     }    
     if (notification === this.config.sockrcv) {
       if ( this.config.debug === 1 ) {

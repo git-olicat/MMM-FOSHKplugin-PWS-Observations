@@ -1,22 +1,22 @@
 {
-  "name": "mmm-wunderground-pws-observations",
+  "name": "mmm-foshkplugin-pws-observations",
   "version": "1.0.0",
-  "description": "A basic module for displaying weather observations from a WunderGound PWS",
-  "main": "MMM-WunderGround-PWS-Observations.js",
+  "description": "A basic module for displaying weather observations from FOSHKplugin",
+  "main": "MMM-FOSHKplugin-PWS-Observations.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/git-olicat/MMM-WunderGround-PWS-Observations.git"
+    "url": "git+https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/git-olicat/MMM-WunderGround-PWS-Observations/issues"
+    "url": "https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations/issues"
   },
-  "homepage": "https://github.com/git-olicat/MMM-WunderGround-PWS-Observations#readme",
+  "homepage": "https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations#readme",
   "dependencies": {
     "request": "^2.88.2"
   }

@@ -1,8 +1,8 @@
-# MMM-WunderGround-PWS-Observations
+# MMM-FOSHKplugin-PWS-Observations
 
 A basic module for displaying local current weather data from your PWS via FOSHKplugin
 
-This project started life as an attempted to get the MMM-Wunderground module from https://github.com/RedNax67/MMM-WunderGround working for a local access via WU protocol offered by FOSHKplugin http service.
+This project started life as an attempted to get the MMM-Wunderground module from https://github.com/saabman/MMM-FOSHKplugin-PWS-Observations working for a local access via WU protocol offered by FOSHKplugin http service.
 I decided to cut it down to just the data provided from your local PWS.   
 
 The Weather Icons used in this module are created and maintained by Erik Flowers. v1.0 artwork by Lukas Bischoff. v1.1 - 2.0 artwork by Erik Flowers www.weathericons.io
@@ -13,11 +13,11 @@ Requires FOSHKplugin http address http://ipaddress:port/observations/ as apiBase
 ## to install:
 ```
 cd ~/MagicMirror/modules # adapt directory if you are using a different one
-git clone https://github.com/git-olicat/MMM-WunderGround-PWS-Observations
-cd MMM-WunderGround-PWS-Observations
+git clone https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations
+cd MMM-FOSHKplugin-PWS-Observations
 npm install
 ```
-<img src ="https://github.com/saabman/MMM-WunderGround-PWS-Observations/blob/main/Screen%20Shot%202021-01-26%20at%2021.42.46.png">
+<img src ="https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations/blob/main/MMM-FOSHKplugin.png">
 
 After installation you have to configure the modul within the modules section of config.js (just before the "]":
 ```
@@ -27,16 +27,16 @@ vi config.js // or use your favourite editor
 Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g. http://192.168.178.100:8080/observations/)
 
 			{
-				module: 'MMM-WunderGround-PWS-Observations',
+				module: 'MMM-FOSHKplugin-PWS-Observations',
 
 				position: 'top_right',
 				header: 'FOSHKplugin data',
 				config: {
 
 					apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.178.100:8080/observations/
-					pws: 'FOSHKplugin',		// this enables optional keys to be transferred
-					apikey: 'MMM',			// needed for optional keys
-					roundTmpDecs: 1,
+					apikey: 'apiKey',
+					pws: 'PWSid',
+					roundTmpDecs:1,
 					sysstat: 0,
 					debug: 1,
 					currentweather: 1,
@@ -161,9 +161,9 @@ The following properties can be configured:
 		<tr>
 			<td><code>updateInterval</code></td>
 			<td>How often does the content needs to be fetched? (Milliseconds)
-				<br>Note that Wunderground updates every 15 minutes maximum. Also free version of API only allows 500 calls per day.
+				<br>There're no restriction with FOSHKplugin, you may update as often as you like
 				<br><b>Possible values:</b> <code>1000</code> - <code>86400000</code>
-				<br><b>Default value:</b> <code>900000</code> (15 minutes)
+				<br><b>Default value:</b> <code>60000</code> (1 minute)
 			</td>
 		</tr>
 		<tr>

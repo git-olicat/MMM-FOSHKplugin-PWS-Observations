@@ -17,7 +17,7 @@ git clone https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations
 cd MMM-FOSHKplugin-PWS-Observations
 npm install
 ```
-<img src ="https://github.com/git-olicat/develop/MMM-FOSHKplugin-PWS-Observations/blob/main/MMM-FOSHKplugin.png">
+<img src ="https://github.com/git-olicat/MMM-FOSHKplugin-PWS-Observations/blob/develop/MMM-FOSHKplugin.png">
 
 After installation you have to configure the modul within the modules section of config.js (just before the "]":
 ```

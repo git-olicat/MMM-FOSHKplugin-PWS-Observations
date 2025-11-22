@@ -910,7 +910,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       lightningHuman = lightningTime.toLocaleDateString("de-DE")+ "<br>" + lightningTime.toLocaleTimeString("de-DE");
       console.log("1 *********************************" + lightningHuman + "***************************");
       console.log("2 *********************************" + locale + "***************************");
-      console.log("3 *********************************" + this.locale + "***************************");
+      //console.log("3 *********************************" + this.locale + "***************************");
       
       var lightning_time = document.createElement("td");
       lightning_time.className = "popr";

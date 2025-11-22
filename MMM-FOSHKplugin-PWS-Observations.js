@@ -29,7 +29,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     windChill: 1,
     heatIndex: 1,
     temperature: 1,
-    
+
     // Oliver 19.11.25
     solarRadiation: 0,
     indoorHumidity: 0,
@@ -78,7 +78,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     lightning_day: 0,      // WH57 lightning count
     lightning_distance: 0, // WH57 lightning distance
   },
-        
+    
   // Define required translations.
   getTranslations: function() {
     return {
@@ -103,7 +103,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       this.file("MMM-FOSHKplugin-PWS-Observations.css")
     ];
   },
-      
+  
   // Define start sequence.
   start: function() {
     Log.info("Starting module: " + this.name);
@@ -115,14 +115,14 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.errorDescription = "";
     this.getFOSHKplugin();
   },
-      
+  
   getFOSHKplugin: function() {
     if ( this.config.debug === 1 ) {
       Log.info("FOSHKplugin: Getting weather.");
     }
     this.sendSocketNotification(this.config.socknot, this.config);
   },
-      
+  
   // Override dom generator.
   getDom: function() {
     var wrapper = document.createElement("div");
@@ -134,7 +134,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var minTempCell;
     var popCell;
     var mmCell;
-    
+
     if (this.config.apiBase === "") {
       wrapper.innerHTML = this.translate("APIBASE") + this.name + ".";
       wrapper.className = "dimmed light small";
@@ -158,7 +158,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     var table_sitrep = document.createElement("table");
     table_sitrep.className = "large1";
-    
+
     var row_sitrep = document.createElement("tr");
     //row_sitrep.className = "pop";
     console.log(row_sitrep);
@@ -166,16 +166,16 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var row1_sitrep = document.createElement("tr");
     //row1_sitrep.className = "pop";
     console.log(row_sitrep);
-    
+
     var row2_sitrep = document.createElement("tr");
     //row2_sitrep.className = "pop";
   
     var row3_sitrep = document.createElement("tr");
     //row3_sitrep.className = "pop";
-    
+
     var row4_sitrep = document.createElement("tr");
     //row4_sitrep.className = "pop";
-    
+
     var row5_sitrep = document.createElement("tr");
     //row5_sitrep.className = "pop";
   
@@ -260,11 +260,11 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       }
       row_sitrep.appendChild(wind);
       table_sitrep.appendChild(row_sitrep);
-      
+  
       var windGustIcon = document.createElement("td");
       windGustIcon.className = "pop wi wi-strong-wind";// + this.windGust;
       row1_sitrep.appendChild(windGustIcon);
-      
+  
       var windGust = document.createElement("td");
       windGust.className = "popr";
       if (this.config.units == "metric") {
@@ -287,12 +287,12 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row2_sitrep.appendChild(HumidityTxt);
       table_sitrep.appendChild(row2_sitrep);
     }
-        
+    
     if (this.config.UV == "1"){
       var UVIcon = document.createElement("td");
       UVIcon.className = "pop wi wi-hot";
       row3_sitrep.appendChild(UVIcon);
-        
+    
       var UVTxt = document.createElement("td");
       UVTxt.className ="popr";
       UVTxt.innerHTML = this.UV;
@@ -315,7 +315,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row4_sitrep.appendChild(rainfall);
       table_sitrep.appendChild(row4_sitrep);
     }
-        
+    
     if (this.config.rainRate == "1"){
       var rainRateIcon = document.createElement("td");
       rainRateIcon.className = "pop wi wi-raindrops";
@@ -331,7 +331,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row5_sitrep.appendChild(rainRate);
       table_sitrep.appendChild(row5_sitrep);
     }
-    
+
     if (this.config.pressure == "1"){
       var pressureIcon = document.createElement("td");
       pressureIcon.className = "pop wi wi-barometer";
@@ -343,39 +343,39 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row6_sitrep.appendChild(pressure);
       table_sitrep.appendChild(row6_sitrep);
     }
-        
+    
     if (this.config.dewPoint == "1"){
       var dewPointIcon = document.createElement("td");
       dewPointIcon.className ="pop";
       dewPointIcon.innerHTML = "DP";
       row7_sitrep.appendChild(dewPointIcon);
-    
+
       var dewPoint = document.createElement("td");
       dewPoint.className ="popr";
       dewPoint.innerHTML = " " + this.dewpt + "&deg;";
       row7_sitrep.appendChild(dewPoint);
       table_sitrep.appendChild(row7_sitrep);
     }
-    
+
     if (this.config.windChill == "1"){
       var windChillIcon = document.createElement("td");
       windChillIcon.className = "pop";
       windChillIcon.innerHTML = "WC";
       row8_sitrep.appendChild(windChillIcon);
-    
+
       var windChill = document.createElement("td");
       windChill.className ="popr";
       windChill.innerHTML = " " + this.windChill + "&deg;";
       row8_sitrep.appendChild(windChill);
       table_sitrep.appendChild(row8_sitrep);
     }
-    
+
     if (this.config.heatIndex == "1"){
       var heatIndexIcon = document.createElement("td");
       heatIndexIcon.className = "pop";
       heatIndexIcon.innerHTML = "HI";
       row9_sitrep.appendChild(heatIndexIcon);
-    
+
       var heatIndex = document.createElement("td");
       heatIndex.className = "popr";
       heatIndex.innerHTML = " " + this.heatIndex + "&deg;";
@@ -387,14 +387,14 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperatureIcon = document.createElement("td");
       temperatureIcon.className = "pop wi wi-thermometer";
       row10_sitrep.appendChild(temperatureIcon);
-    
+
       var temperature = document.createElement("td");
       temperature.className = "popr";
       temperature.innerHTML = " " + this.temperature + "&deg;";
       row10_sitrep.appendChild(temperature);
       table_sitrep.appendChild(row10_sitrep);
     }
-    
+
     // Oliver, 22.11.25 - what about rows?
     if (this.config.solarRadiation == "1"){
       var solarRadiationIcon = document.createElement("td");
@@ -424,7 +424,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperatureIcon = document.createElement("td");
       temperatureIcon.className = "pop wi wi-thermometer";
       row13_sitrep.appendChild(temperatureIcon);
-    
+
       var temperature = document.createElement("td");
       temperature.className = "popr";
       temperature.innerHTML = " " + this.indoorTemperature + "&deg;";
@@ -448,7 +448,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature1Icon = document.createElement("td");
       temperature1Icon.className = "pop wi wi-thermometer";
       row15_sitrep.appendChild(temperature1Icon);
-    
+
       var temperature1 = document.createElement("td");
       temperature1.className = "popr";
       temperature1.innerHTML = " " + this.temperature1 + "&deg;";
@@ -472,7 +472,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature2Icon = document.createElement("td");
       temperature2Icon.className = "pop wi wi-thermometer";
       row17_sitrep.appendChild(temperature2Icon);
-    
+
       var temperature2 = document.createElement("td");
       temperature2.className = "popr";
       temperature2.innerHTML = " " + this.temperature2 + "&deg;";
@@ -496,7 +496,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature3Icon = document.createElement("td");
       temperature3Icon.className = "pop wi wi-thermometer";
       row19_sitrep.appendChild(temperature3Icon);
-    
+
       var temperature3 = document.createElement("td");
       temperature3.className = "popr";
       temperature3.innerHTML = " " + this.temperature3 + "&deg;";
@@ -520,7 +520,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature4Icon = document.createElement("td");
       temperature4Icon.className = "pop wi wi-thermometer";
       row21_sitrep.appendChild(temperature4Icon);
-    
+
       var temperature4 = document.createElement("td");
       temperature4.className = "popr";
       temperature4.innerHTML = " " + this.temperature4 + "&deg;";
@@ -544,7 +544,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature5Icon = document.createElement("td");
       temperature5Icon.className = "pop wi wi-thermometer";
       row23_sitrep.appendChild(temperature5Icon);
-    
+
       var temperature5 = document.createElement("td");
       temperature5.className = "popr";
       temperature5.innerHTML = " " + this.temperature5 + "&deg;";
@@ -568,7 +568,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature6Icon = document.createElement("td");
       temperature6Icon.className = "pop wi wi-thermometer";
       row25_sitrep.appendChild(temperature6Icon);
-    
+
       var temperature6 = document.createElement("td");
       temperature6.className = "popr";
       temperature6.innerHTML = " " + this.temperature6 + "&deg;";
@@ -592,7 +592,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature7Icon = document.createElement("td");
       temperature7Icon.className = "pop wi wi-thermometer";
       row27_sitrep.appendChild(temperature7Icon);
-    
+
       var temperature7 = document.createElement("td");
       temperature7.className = "popr";
       temperature7.innerHTML = " " + this.temperature7 + "&deg;";
@@ -616,7 +616,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var temperature8Icon = document.createElement("td");
       temperature8Icon.className = "pop wi wi-thermometer";
       row29_sitrep.appendChild(temperature8Icon);
-    
+
       var temperature8 = document.createElement("td");
       temperature8.className = "popr";
       temperature8.innerHTML = " " + this.temperature8 + "&deg;";
@@ -635,7 +635,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row30_sitrep.appendChild(soilmoistureTxt);
       table_sitrep.appendChild(row30_sitrep);
     }
-    
+
     if (this.config.soilmoisture2 == "1"){
       var soilmoisture2Icon = document.createElement("td");
       soilmoisture2Icon.className = "pop wi wi-hot lpad";
@@ -809,7 +809,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltempIcon = document.createElement("td");
       soiltempIcon.className = "pop wi wi-thermometer-exterior";
       row46_sitrep.appendChild(soiltempIcon);
-    
+
       var soiltemp = document.createElement("td");
       soiltemp.className = "popr";
       soiltemp.innerHTML = " " + this.soiltemp + "&deg;";
@@ -821,7 +821,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp2Icon = document.createElement("td");
       soiltemp2Icon.className = "pop wi wi-thermometer-exterior";
       row47_sitrep.appendChild(soiltemp2Icon);
-    
+
       var soil2temp = document.createElement("td");
       soiltemp2.className = "popr";
       soiltemp2.innerHTML = " " + this.soiltemp2 + "&deg;";
@@ -833,7 +833,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp3Icon = document.createElement("td");
       soiltemp3Icon.className = "pop wi wi-thermometer-exterior";
       row48_sitrep.appendChild(soiltemp3Icon);
-    
+
       var soil3temp = document.createElement("td");
       soiltemp3.className = "popr";
       soiltemp3.innerHTML = " " + this.soiltemp3 + "&deg;";
@@ -845,7 +845,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp4Icon = document.createElement("td");
       soiltemp4Icon.className = "pop wi wi-thermometer-exterior";
       row49_sitrep.appendChild(soiltemp4Icon);
-    
+
       var soil4temp = document.createElement("td");
       soiltemp4.className = "popr";
       soiltemp4.innerHTML = " " + this.soiltemp4 + "&deg;";
@@ -857,7 +857,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp5Icon = document.createElement("td");
       soiltemp5Icon.className = "pop wi wi-thermometer-exterior";
       row50_sitrep.appendChild(soiltemp5Icon);
-    
+
       var soil5temp = document.createElement("td");
       soiltemp5.className = "popr";
       soiltemp5.innerHTML = " " + this.soiltemp5 + "&deg;";
@@ -869,7 +869,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp6Icon = document.createElement("td");
       soiltemp6Icon.className = "pop wi wi-thermometer-exterior";
       row51_sitrep.appendChild(soiltemp6Icon);
-    
+
       var soil6temp = document.createElement("td");
       soiltemp6.className = "popr";
       soiltemp6.innerHTML = " " + this.soiltemp6 + "&deg;";
@@ -881,7 +881,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp7Icon = document.createElement("td");
       soiltemp7Icon.className = "pop wi wi-thermometer-exterior";
       row52_sitrep.appendChild(soiltemp7Icon);
-    
+
       var soil7temp = document.createElement("td");
       soiltemp7.className = "popr";
       soiltemp7.innerHTML = " " + this.soiltemp7 + "&deg;";
@@ -893,7 +893,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var soiltemp8Icon = document.createElement("td");
       soiltemp8Icon.className = "pop wi wi-thermometer-exterior";
       row53_sitrep.appendChild(soiltemp8Icon);
-    
+
       var soil8temp = document.createElement("td");
       soiltemp8.className = "popr";
       soiltemp8.innerHTML = " " + this.soiltemp8 + "&deg;";
@@ -905,13 +905,13 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var lightning_timeIcon = document.createElement("td");
       lightning_timeIcon.className = "pop wi wi-lightning";
       row54_sitrep.appendChild(lightning_timeIcon);
-    
+
       const lightningTime = new Date(this.lightning_time * 1000);
       lightningHuman = lightningTime.toLocaleDateString("de-DE")+ "<br>" + lightningTime.toLocaleTimeString("de-DE");
       console.log("1 *********************************" + lightningHuman + "***************************");
-      console.log("2 *********************************" + locale + "***************************");
+      //console.log("2 *********************************" + locale + "***************************");
       //console.log("3 *********************************" + this.locale + "***************************");
-      
+  
       var lightning_time = document.createElement("td");
       lightning_time.className = "popr";
       lightning_time.innerHTML = " " + lightningHuman + "";
@@ -923,7 +923,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var lightning_dayIcon = document.createElement("td");
       lightning_dayIcon.className = "pop wi wi-lightning";
       row55_sitrep.appendChild(lightning_dayIcon);
-    
+
       var lightning_day = document.createElement("td");
       lightning_day.className = "popr";
       lightning_day.innerHTML = " " + this.lightning_day + "";
@@ -935,7 +935,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var lightning_distanceIcon = document.createElement("td");
       lightning_distanceIcon.className = "pop wi wi-lightning";
       row56_sitrep.appendChild(lightning_distanceIcon);
-    
+
       var lightning_distance = document.createElement("td");
       lightning_distance.className = "popr";
       if (this.config.units == "metric") {
@@ -952,7 +952,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     console.log(wrapper);
     return wrapper;
   },
-    
+
   /* processWeather(data)
    * Uses the received data to set the various values.
    *
@@ -967,7 +967,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     this.temperature = data.observations[0][this.config.units].temp;
     console.log(this.config.units + " " + this.temperature)
-    
+
     this.heatIndex = data.observations[0][this.config.units].heatIndex;
     this.dewpt = data.observations[0][this.config.units].dewpt;
     this.windChill =data.observations[0][this.config.units].windChill;
@@ -979,7 +979,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     // Oliver, 19.11.25
     this.solarRadiation = data.observations[0].solarRadiation;
-    
+
     this.indoorHumidity = data.observations[0].indoorHumidity;
     this.indoorTemperature = data.observations[0][this.config.units].indoorTemp;
 
@@ -999,7 +999,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.Humidity7 = data.observations[0].humidity7;
     this.temperature8 = data.observations[0][this.config.units].temp8f;
     this.Humidity8 = data.observations[0].humidity8;
-    
+
     this.soilmoisture = data.observations[0].soilmoisture;
     this.soilmoisture2 = data.observations[0].soilmoisture2;
     this.soilmoisture3 = data.observations[0].soilmoisture3;
@@ -1016,7 +1016,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.soilmoisture14 = data.observations[0].soilmoisture14;
     this.soilmoisture15 = data.observations[0].soilmoisture15;
     this.soilmoisture16 = data.observations[0].soilmoisture16;
-    
+
     this.soiltemp = data.observations[0][this.config.units].soiltempf;
     this.soiltemp2 = data.observations[0][this.config.units].soiltemp2f;
     this.soiltemp3 = data.observations[0][this.config.units].soiltemp3f;
@@ -1029,7 +1029,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.lightning_time = data.observations[0].lightningTime;
     this.lightning_day = data.observations[0].lightningCount;
     this.lightning_distance = data.observations[0][this.config.units].lightningDistance;
-    
+
     this.loaded = true;
     this.updateDom(this.config.animationSpeed);
 
@@ -1098,7 +1098,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     if ( this.config.debug === 1 ) {
       Log.info('FOSHKplugin received ' + notification);
-    }    
+    }
     if (notification === this.config.sockrcv) {
       if ( this.config.debug === 1 ) {
         Log.info('received ' + this.config.sockrcv);

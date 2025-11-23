@@ -33,10 +33,10 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 				header: 'FOSHKplugin data',
 				config: {
 
-					apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.178.100:8080/observations/
+					apiBase: 'http://ipaddress:port/observations/', // e.g. http://192.168.15.100:8096/observations/
 					pws: 'FOSHKplugin',
 					apikey: 'MMM',
-          updateInterval: 60000,  // 1 minute
+          updateInterval: 60000,  // 1 minute = 60000 millis
 					roundTmpDecs: 0,
 					sysstat: 0,
 					debug: 1,
@@ -45,14 +45,14 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					humidity: 1,
 					pressure: 1,
 					wind: 1,
-          solarRadiation: 0,
+          solarRadiation: 1,
 					UV: 1,
 					rain: 1,
 					rainRate: 1,
 					dewPoint: 1,
 					windChill: 1,
 					heatIndex: 1,
-          // new keys
+          // new keys - choose whatever you want, but bear in mind the limited space
           indoorTemperature: 0,
           indoorHumidity: 0,
           temperature1: 0,
@@ -95,9 +95,9 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
           soiltemp6: 0,
           soiltemp7: 0,
           soiltemp8: 0,
-          lightning_time: 0,
           lightning_day: 0,
           lightning_distance: 0,
+          lightning_time: 0,
 				}
 			},
 

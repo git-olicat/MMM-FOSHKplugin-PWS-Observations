@@ -89,7 +89,6 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
           soilmoisture16: 0,
           soiltemp: 0,
           soiltemp2: 0,
-          soiltemp2: 0,
           soiltemp3: 0,
           soiltemp4: 0,
           soiltemp5: 0,
@@ -98,7 +97,7 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
           soiltemp8: 0,
           lightning_time: 0,
           lightning_day: 0,
-          lightning_distance: 0
+          lightning_distance: 0,
 				}
 			},
 

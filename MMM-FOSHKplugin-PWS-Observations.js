@@ -74,9 +74,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     soiltemp6: 0,          // WN34 channel #6
     soiltemp7: 0,          // WN34 channel #7
     soiltemp8: 0,          // WN34 channel #8
-    lightning_time: 0,     // WH57 last lightning
     lightning_day: 0,      // WH57 lightning count
     lightning_distance: 0, // WH57 lightning distance
+    lightning_time: 0,     // WH57 last lightning
   },
     
   // Define required translations.
@@ -949,21 +949,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row53_sitrep);
     }
 
-    if (this.config.lightning_time == "1"){
-      var lightning_timeIcon = document.createElement("td");
-      lightning_timeIcon.className = "pop wi wi-lightning";
-      row54_sitrep.appendChild(lightning_timeIcon);
-
-      const lightningTime = new Date(this.lightning_time * 1000);
-      lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
-  
-      var lightning_time = document.createElement("td");
-      lightning_time.className = "poplightningr";
-      lightning_time.innerHTML = " " + lightningHuman + "";
-      row54_sitrep.appendChild(lightning_time);
-      table_sitrep.appendChild(row54_sitrep);
-    }
-
     if (this.config.lightning_day == "1"){
       var lightning_dayIcon = document.createElement("td");
       lightning_dayIcon.className = "pop wi wi-lightning";
@@ -990,6 +975,21 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       }
       row56_sitrep.appendChild(lightning_distance);
       table_sitrep.appendChild(row56_sitrep);
+    }
+
+    if (this.config.lightning_time == "1"){
+      var lightning_timeIcon = document.createElement("td");
+      lightning_timeIcon.className = "pop wi wi-lightning";
+      row54_sitrep.appendChild(lightning_timeIcon);
+
+      const lightningTime = new Date(this.lightning_time * 1000);
+      lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
+  
+      var lightning_time = document.createElement("td");
+      lightning_time.className = "poplightningr";
+      lightning_time.innerHTML = " " + lightningHuman + "";
+      row54_sitrep.appendChild(lightning_time);
+      table_sitrep.appendChild(row54_sitrep);
     }
 
     console.log("table" + table_sitrep);

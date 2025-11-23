@@ -958,7 +958,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
   
       var lightning_time = document.createElement("td");
-      lightning_time.className = "popr";
+      lightning_time.className = "poplightningr";
       lightning_time.innerHTML = " " + lightningHuman + "";
       row54_sitrep.appendChild(lightning_time);
       table_sitrep.appendChild(row54_sitrep);

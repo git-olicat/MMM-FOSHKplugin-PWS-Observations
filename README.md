@@ -9,6 +9,7 @@ The Weather Icons used in this module are created and maintained by Erik Flowers
 
 
 Requires FOSHKplugin http address http://ipaddress:port/observations/ as apiBase
+See also the recipe <a href="https://foshkplugin.phantasoft.de/generic#magicmirror" target="_blank">Displaying local PWS data with FOSHKplugin on a MagicMirror</a> on FOSHKplugin web page.
 
 ## to install:
 ```

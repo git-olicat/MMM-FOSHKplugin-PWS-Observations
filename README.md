@@ -1,6 +1,6 @@
 # MMM-FOSHKplugin-PWS-Observations
 
-A basic module for displaying local current weather data from your PWS via FOSHKplugin
+A basic module for displaying local current weather data from your PWS via <a href="https://foshkplugin.phantasoft.de/generic" target="_blank">FOSHKplugin</a>
 
 This project started life as an attempted to get the MMM-Wunderground module from https://github.com/saabman/MMM-Wunderground-PWS-Observations working for a local access via WU protocol offered by FOSHKplugin http service.
 I decided to cut it down to just the data provided from your local PWS.   

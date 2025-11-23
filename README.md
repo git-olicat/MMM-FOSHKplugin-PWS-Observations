@@ -3,7 +3,7 @@
 A basic module for displaying local current weather data from your PWS via <a href="https://foshkplugin.phantasoft.de/generic" target="_blank">FOSHKplugin</a>
 
 This project started life as an attempted to get the MMM-Wunderground module from https://github.com/saabman/MMM-Wunderground-PWS-Observations working for a local access via WU protocol offered by FOSHKplugin http service.
-I decided to cut it down to just the data provided from your local PWS.   
+I decided to cut it down to just the data provided from your local PWS.
 
 The Weather Icons used in this module are created and maintained by Erik Flowers. v1.0 artwork by Lukas Bischoff. v1.1 - 2.0 artwork by Erik Flowers www.weathericons.io
 
@@ -121,13 +121,13 @@ The following properties can be configured:
 			<td>The FOSHKplugin http URL
 				<br> This value is <b>REQUIRED</b>
 			</td>
-    </tr>
+		</tr>
 		<tr>
 			<td><code>apikey</code></td>
 			<td>The Weather Underground API key
 				<br> This value is optional.
 			</td>
-    </tr>
+		</tr>
 		<tr>
 			<td><code>wind</code></td>
 			<td>Displays wind data<br>

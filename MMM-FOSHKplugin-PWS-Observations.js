@@ -848,7 +848,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     if (this.config.soiltemp3 == "1"){
       var soiltemp3Icon = document.createElement("td");
-      soiltemp3Icon.className = "pop wi wi-thermometer-exterior";
+      soiltemp3Icon.className = "pop wi-thermometer-exterior";
       soiltemp3Icon.innerHTML = "3";
       row48_sitrep.appendChild(soiltemp3Icon);
 

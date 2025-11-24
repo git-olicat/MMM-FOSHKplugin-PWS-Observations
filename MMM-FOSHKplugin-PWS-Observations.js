@@ -975,8 +975,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
       var Value = document.createElement("td");
       Value.className = "popr";
-      Value.innerHTML = " " + this.lightning_day + "";
-      row_sitrep.appendChild(lightning_day);
+      Value.innerHTML = " " + this.lightning_day;
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
 

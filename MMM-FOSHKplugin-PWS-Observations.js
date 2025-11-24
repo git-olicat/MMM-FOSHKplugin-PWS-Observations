@@ -965,51 +965,37 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row53_sitrep);
     }
 
-    if (this.config.lightning_day == "1"){
-      var lightning_dayIcon = document.createElement("td");
-      lightning_dayIcon.className = "pop wi wi-lightning";
-      row55_sitrep.appendChild(lightning_dayIcon);
+    // Versuch ohne fortlaufende Nummer in row
 
-      var lightning_day = document.createElement("td");
-      lightning_day.className = "popr";
-      lightning_day.innerHTML = " " + this.lightning_day + "";
-      row55_sitrep.appendChild(lightning_day);
-      table_sitrep.appendChild(row55_sitrep);
+    if (this.config.lightning_day == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.lightning_day + "";
+      row_sitrep.appendChild(lightning_day);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.lightning_distance == "1"){
-      var lightning_distanceIcon = document.createElement("td");
-      lightning_distanceIcon.className = "pop wi wi-lightning";
-      row56_sitrep.appendChild(lightning_distanceIcon);
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
 
-      var lightning_distance = document.createElement("td");
-      lightning_distance.className = "popr";
+      var Value = document.createElement("td");
+      Value.className = "popr";
       if (this.config.units == "metric") {
-        lightning_distance.innerHTML = " " + this.lightning_distance + "km";
+        Value.innerHTML = " " + this.lightning_distance + "km";
       } else {
-        lightning_distance.innerHTML = " " + this.lightning_distance + "mi";
+        Value.innerHTML = " " + this.lightning_distance + "mi";
       }
-      row56_sitrep.appendChild(lightning_distance);
-      table_sitrep.appendChild(row56_sitrep);
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-/*
-    if (this.config.lightning_time == "1"){
-      var lightning_timeIcon = document.createElement("td");
-      lightning_timeIcon.className = "pop wi wi-lightning";
-      row54_sitrep.appendChild(lightning_timeIcon);
-
-      const lightningTime = new Date(this.lightning_time * 1000);
-      lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
-  
-      var lightning_time = document.createElement("td");
-      lightning_time.className = "poplightningr";
-      lightning_time.innerHTML = " " + lightningHuman + "";
-      row54_sitrep.appendChild(lightning_time);
-      table_sitrep.appendChild(row54_sitrep);
-    }
-*/
-
-    // Versuch ohne fortlaufende Nummer in row
 
     if (this.config.lightning_time == "1"){
       var row_sitrep = document.createElement("tr");

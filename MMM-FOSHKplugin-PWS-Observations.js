@@ -1013,7 +1013,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
 
     // Versuch ohne fortlaufende Nummer in row
-    
+    /*
     if (this.config.rainDay == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -1047,6 +1047,59 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(rainWeek);
       table_sitrep.appendChild(row_sitrep);
     }
+
+    if (this.config.rainMonth == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      row_sitrep.appendChild(Icon);
+
+      var rainMonth = document.createElement("td");
+      rainMonth.className ="popr";
+      if (this.config.units == "metric") {
+        rainMonth.innerHTML = " " + this.rainMonth + "mm";
+      } else {
+        rainMonth.innerHTML = " " + this.rainMonth + "\"";
+      }
+      row_sitrep.appendChild(rainMonth);
+      table_sitrep.appendChild(row_sitrep);
+    }
+    */
+
+
+
+
+    // Array Test
+    const items = [
+      ["rainDay","pop wi wi-umbrella","d","mm"],
+      ["rainWeek","pop wi wi-umbrella","w","mm"],
+      ["rainMonth","pop wi wi-umbrella","m","mm"],
+      ["rainYear","pop wi wi-umbrella","y","mm"],
+      ["rain24","pop wi wi-umbrella","24","mm"],
+      ["rainEvent","pop wi wi-umbrella","e","mm"],
+    ];
+
+    for (let i = 0; i < items.length; i++) {
+      console.log(items[i][0]+" = "+this.eval(items[i][0]));
+      if (this.config.eval(items[i][0]) == "1"){
+        var row_sitrep = document.createElement("tr");
+        var Icon = document.createElement("td");
+        Icon.className = items[i][1];
+        Icon.innerHTML = items[i][2];
+        row_sitrep.appendChild(Icon);
+
+        var value = document.createElement("td");
+        value.className ="popr";
+        if (this.config.units == "metric") {
+          value.innerHTML = " " + this.eval(items[i][0])  + "mm";
+        } else {
+          value.innerHTML = " " + this.eval(items[i][0]) + "\"";
+        }
+        row_sitrep.appendChild(value);
+        table_sitrep.appendChild(row_sitrep);
+      }
+    }
+
 
 
 

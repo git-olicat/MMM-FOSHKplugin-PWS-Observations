@@ -644,7 +644,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row29_sitrep.appendChild(temperature8);
       table_sitrep.appendChild(row29_sitrep);
     }
-
+/*
     if (this.config.Humidity8 == "1"){
       var indoorHumidity8Icon = document.createElement("td");
       indoorHumidity8Icon.className = "pop wi wi-humidity lpad";
@@ -657,9 +657,23 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row28_sitrep.appendChild(indoorHumidity8Txt);
       table_sitrep.appendChild(row28_sitrep);
     }
-
+*/
 
     // Versuch ohne fortlaufende Nummer in row
+
+    if (this.config.Humidity8 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "8";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity8 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
 
     if (this.config.soilmoisture == "1"){
       row_sitrep = document.createElement("tr");

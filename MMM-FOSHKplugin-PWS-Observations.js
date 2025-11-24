@@ -1018,6 +1018,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "d";
       row_sitrep.appendChild(Icon);
 
       var rainDay = document.createElement("td");
@@ -1035,6 +1036,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "w";
       row_sitrep.appendChild(Icon);
 
       var rainWeek = document.createElement("td");
@@ -1052,6 +1054,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "m";
       row_sitrep.appendChild(Icon);
 
       var rainMonth = document.createElement("td");

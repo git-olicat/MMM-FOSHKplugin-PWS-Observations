@@ -992,7 +992,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row56_sitrep.appendChild(lightning_distance);
       table_sitrep.appendChild(row56_sitrep);
     }
-
+/*
     if (this.config.lightning_time == "1"){
       var lightning_timeIcon = document.createElement("td");
       lightning_timeIcon.className = "pop wi wi-lightning";
@@ -1007,13 +1007,25 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row54_sitrep.appendChild(lightning_time);
       table_sitrep.appendChild(row54_sitrep);
     }
-
-
-
-
-
+*/
 
     // Versuch ohne fortlaufende Nummer in row
+
+    if (this.config.lightning_time == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
+
+      const lightningTime = new Date(this.lightning_time * 1000);
+      lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
+  
+      var Value = document.createElement("td");
+      Value.className = "poplightningr";
+      Value.innerHTML = " " + lightningHuman + "";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
 
     if (this.config.rainDay == "1"){
       var row_sitrep = document.createElement("tr");
@@ -1025,9 +1037,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.rainDay + "mm";
+        Value.innerHTML = " " + this.rainDay + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.rainDay + "\"";
+        Value.innerHTML = " " + this.rainDay + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1043,9 +1055,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.rainWeek + "mm";
+        Value.innerHTML = " " + this.rainWeek + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.rainWeek + "\"";
+        Value.innerHTML = " " + this.rainWeek + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1061,9 +1073,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.rainMonth + "mm";
+        Value.innerHTML = " " + this.rainMonth + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.rainMonth + "\"";
+        Value.innerHTML = " " + this.rainMonth + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1079,9 +1091,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.rainYear + "mm";
+        Value.innerHTML = " " + this.rainYear + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.rainYear + "\"";
+        Value.innerHTML = " " + this.rainYear + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1097,9 +1109,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.rainEvent + "mm";
+        Value.innerHTML = " " + this.rainEvent + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.rainEvent + "\"";
+        Value.innerHTML = " " + this.rainEvent + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1116,9 +1128,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.piezoDay + "mm";
+        Value.innerHTML = " " + this.piezoDay + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.piezoDay + "\"";
+        Value.innerHTML = " " + this.piezoDay + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1134,9 +1146,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.piezoWeek + "mm";
+        Value.innerHTML = " " + this.piezoWeek + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.piezoWeek + "\"";
+        Value.innerHTML = " " + this.piezoWeek + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1152,9 +1164,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.piezoMonth + "mm";
+        Value.innerHTML = " " + this.piezoMonth + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.piezoMonth + "\"";
+        Value.innerHTML = " " + this.piezoMonth + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1170,9 +1182,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.piezoYear + "mm";
+        Value.innerHTML = " " + this.piezoYear + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.piezoYear + "\"";
+        Value.innerHTML = " " + this.piezoYear + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);

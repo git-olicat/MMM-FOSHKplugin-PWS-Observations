@@ -253,14 +253,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var row51_sitrep = document.createElement("tr");
     var row52_sitrep = document.createElement("tr");
     var row53_sitrep = document.createElement("tr");
-    var row54_sitrep = document.createElement("tr");
-    var row55_sitrep = document.createElement("tr");
-    var row56_sitrep = document.createElement("tr");
-    var row57_sitrep = document.createElement("tr");
-    var row58_sitrep = document.createElement("tr");
-    var row59_sitrep = document.createElement("tr");
-    var row60_sitrep = document.createElement("tr");
-  
+
     if (this.config.temperature == "1"){
       var temperatureIcon = document.createElement("td");
       temperatureIcon.className = "pop wi wi-thermometer";
@@ -952,20 +945,22 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row52_sitrep);
     }
 
-    if (this.config.soiltemp8 == "1"){
-      var soiltemp8Icon = document.createElement("td");
-      soiltemp8Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp8Icon.innerHTML = "8";
-      row53_sitrep.appendChild(soiltemp8Icon);
-
-      var soiltemp8 = document.createElement("td");
-      soiltemp8.className = "popr";
-      soiltemp8.innerHTML = " " + this.soiltemp8 + "&deg;";
-      row53_sitrep.appendChild(soiltemp8);
-      table_sitrep.appendChild(row53_sitrep);
-    }
 
     // Versuch ohne fortlaufende Nummer in row
+
+    if (this.config.soiltemp8 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "8";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp8 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
 
     if (this.config.lightning_day == "1"){
       var row_sitrep = document.createElement("tr");

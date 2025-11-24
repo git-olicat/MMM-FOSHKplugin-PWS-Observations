@@ -1188,9 +1188,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.piezoEvent + "mm";
+        Value.innerHTML = " " + this.piezoEvent + " " + "mm";
       } else {
-        Value.innerHTML = " " + this.piezoEvent + "\"";
+        Value.innerHTML = " " + this.piezoEvent + " " + "\"";
       }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1347,6 +1347,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.rainDay = data.observations[0][this.config.units].precipDay;
     this.rainWeek = data.observations[0][this.config.units].precipWeek;
     this.rainMonth = data.observations[0][this.config.units].precipMonth;
+    this.rain24 = data.observations[0][this.config.units].precip24;
     this.rainYear = data.observations[0][this.config.units].precipYear;
     this.rainEvent = data.observations[0][this.config.units].precipEvent;
 
@@ -1356,7 +1357,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.piezoYear = data.observations[0][this.config.units].piezoYear;
     this.piezo24 = data.observations[0][this.config.units].piezo24;
     this.piezoEvent = data.observations[0][this.config.units].piezoEvent;
-    this.isRaining = data.observations[0][this.config.units].isRaining;
+    this.isRaining = data.observations[0].isRaining;
 
     this.realtimeFrequency = data.observations[0].realtimeFrequency;
 

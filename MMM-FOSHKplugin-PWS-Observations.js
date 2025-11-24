@@ -1067,6 +1067,25 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(rainMonth);
       table_sitrep.appendChild(row_sitrep);
     }
+
+    if (this.config.rainYear == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "y";
+      row_sitrep.appendChild(Icon);
+
+      var rainYear = document.createElement("td");
+      rainYear.className ="popr";
+      if (this.config.units == "metric") {
+        rainYear.innerHTML = " " + this.rainYear + "mm";
+      } else {
+        rainYear.innerHTML = " " + this.rainYear + "\"";
+      }
+      row_sitrep.appendChild(rainYear);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
     Log.info('***********************************************************************************************************************');
 
 

@@ -841,6 +841,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row44_sitrep.appendChild(soilmoisture15Txt);
       table_sitrep.appendChild(row44_sitrep);
     }
+    /*
     if (this.config.soilmoisture16 == "1"){
       var soilmoisture16Icon = document.createElement("td");
       soilmoisture16Icon.className = "pop";
@@ -854,8 +855,21 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row45_sitrep);
     }
 
-
     // Versuch ohne fortlaufende Nummer in row
+
+    if (this.config.soilmoisture16 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM16";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture16 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
 
     if (this.config.soiltemp == "1"){
       row_sitrep = document.createElement("tr");

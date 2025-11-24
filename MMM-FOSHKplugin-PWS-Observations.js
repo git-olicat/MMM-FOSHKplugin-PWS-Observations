@@ -1015,7 +1015,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     // Versuch ohne fortlaufende Nummer in row
     
     if (this.config.rainDay == "1"){
-      
+      var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-umbrella";
       row_sitrep.appendChild(Icon);
@@ -1030,6 +1030,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(rainDay);
       table_sitrep.appendChild(row_sitrep);
     }
+
     if (this.config.rainWeek == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");

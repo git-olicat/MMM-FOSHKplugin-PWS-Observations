@@ -1068,6 +1068,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row_sitrep);
     }
 
+    /*
+
     if (this.config.rainYear == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -1083,6 +1085,26 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
         rainYear.innerHTML = " " + this.rainYear + "\"";
       }
       row_sitrep.appendChild(rainYear);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    */
+
+    if (this.config.rainYear == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "y";
+      row_sitrep.appendChild(Icon);
+
+      var value = document.createElement("td");
+      value.className ="popr";
+      if (this.config.units == "metric") {
+        value.innerHTML = " " + this.rainYear + "mm";
+      } else {
+        value.innerHTML = " " + this.rainYear + "\"";
+      }
+      row_sitrep.appendChild(value);
       table_sitrep.appendChild(row_sitrep);
     }
 

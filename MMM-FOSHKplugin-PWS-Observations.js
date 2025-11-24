@@ -1012,6 +1012,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
 
 
+
     // Versuch ohne fortlaufende Nummer in row
 
     if (this.config.rainDay == "1"){
@@ -1021,14 +1022,14 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.innerHTML = "d";
       row_sitrep.appendChild(Icon);
 
-      var rainDay = document.createElement("td");
-      rainDay.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        rainDay.innerHTML = " " + this.rainDay + "mm";
+        Value.innerHTML = " " + this.rainDay + "mm";
       } else {
-        rainDay.innerHTML = " " + this.rainDay + "\"";
+        Value.innerHTML = " " + this.rainDay + "\"";
       }
-      row_sitrep.appendChild(rainDay);
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
 
@@ -1039,14 +1040,14 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.innerHTML = "w";
       row_sitrep.appendChild(Icon);
 
-      var rainWeek = document.createElement("td");
-      rainWeek.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        rainWeek.innerHTML = " " + this.rainWeek + "mm";
+        Value.innerHTML = " " + this.rainWeek + "mm";
       } else {
-        rainWeek.innerHTML = " " + this.rainWeek + "\"";
+        Value.innerHTML = " " + this.rainWeek + "\"";
       }
-      row_sitrep.appendChild(rainWeek);
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
 
@@ -1057,18 +1058,16 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.innerHTML = "m";
       row_sitrep.appendChild(Icon);
 
-      var rainMonth = document.createElement("td");
-      rainMonth.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        rainMonth.innerHTML = " " + this.rainMonth + "mm";
+        Value.innerHTML = " " + this.rainMonth + "mm";
       } else {
-        rainMonth.innerHTML = " " + this.rainMonth + "\"";
+        Value.innerHTML = " " + this.rainMonth + "\"";
       }
-      row_sitrep.appendChild(rainMonth);
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
-
-    /*
 
     if (this.config.rainYear == "1"){
       var row_sitrep = document.createElement("tr");
@@ -1077,38 +1076,149 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.innerHTML = "y";
       row_sitrep.appendChild(Icon);
 
-      var rainYear = document.createElement("td");
-      rainYear.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        rainYear.innerHTML = " " + this.rainYear + "mm";
+        Value.innerHTML = " " + this.rainYear + "mm";
       } else {
-        rainYear.innerHTML = " " + this.rainYear + "\"";
+        Value.innerHTML = " " + this.rainYear + "\"";
       }
-      row_sitrep.appendChild(rainYear);
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
 
-    */
+    if (this.config.rainEvent == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "e";
+      row_sitrep.appendChild(Icon);
 
-    if (this.config.rainYear == "1"){
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.rainEvent + "mm";
+      } else {
+        Value.innerHTML = " " + this.rainEvent + "\"";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    // WS90
+    if (this.config.piezoDay == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "d";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.piezoDay + "mm";
+      } else {
+        Value.innerHTML = " " + this.piezoDay + "\"";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.piezoWeek == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "w";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.piezoWeek + "mm";
+      } else {
+        Value.innerHTML = " " + this.piezoWeek + "\"";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.piezoMonth == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "m";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.piezoMonth + "mm";
+      } else {
+        Value.innerHTML = " " + this.piezoMonth + "\"";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.piezoYear == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-umbrella";
       Icon.innerHTML = "y";
       row_sitrep.appendChild(Icon);
 
-      var value = document.createElement("td");
-      value.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        value.innerHTML = " " + this.rainYear + "mm";
+        Value.innerHTML = " " + this.piezoYear + "mm";
       } else {
-        value.innerHTML = " " + this.rainYear + "\"";
+        Value.innerHTML = " " + this.piezoYear + "\"";
       }
-      row_sitrep.appendChild(value);
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
 
-    Log.info('***********************************************************************************************************************');
+    if (this.config.piezoEvent == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "e";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.piezoEvent + "mm";
+      } else {
+        Value.innerHTML = " " + this.piezoEvent + "\"";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.isRaining == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "is";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      
+      if (this.isRaining === "0") {
+        if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
+      } else {
+      }
+        if (config.language == "de") { Value.innerHTML = "nein"; } else { Value.innerHTML = "no"; }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+
+
+
+
 
 
     /*

@@ -841,7 +841,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row44_sitrep.appendChild(soilmoisture15Txt);
       table_sitrep.appendChild(row44_sitrep);
     }
-    /*
+/*
     if (this.config.soilmoisture16 == "1"){
       var soilmoisture16Icon = document.createElement("td");
       soilmoisture16Icon.className = "pop";
@@ -855,6 +855,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row45_sitrep);
     }
 
+*/
     // Versuch ohne fortlaufende Nummer in row
 
     if (this.config.soilmoisture16 == "1"){

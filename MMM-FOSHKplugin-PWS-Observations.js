@@ -854,99 +854,106 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row45_sitrep);
     }
 
-    if (this.config.soiltemp == "1"){
-      var soiltempIcon = document.createElement("td");
-      soiltempIcon.className = "pop wi wi-thermometer-exterior";
-      soiltempIcon.innerHTML = "1";
-      row46_sitrep.appendChild(soiltempIcon);
 
-      var soiltemp = document.createElement("td");
-      soiltemp.className = "popr";
-      soiltemp.innerHTML = " " + this.soiltemp + "&deg;";
-      row46_sitrep.appendChild(soiltemp);
-      table_sitrep.appendChild(row46_sitrep);
+    // Versuch ohne fortlaufende Nummer in row
+
+    if (this.config.soiltemp == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "1";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.soiltemp2 == "1"){
-      var soiltemp2Icon = document.createElement("td");
-      soiltemp2Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp2Icon.innerHTML = "2";
-      row47_sitrep.appendChild(soiltemp2Icon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "2";
+      row_sitrep.appendChild(Icon);
 
-      var soiltemp2 = document.createElement("td");
-      soiltemp2.className = "popr";
-      soiltemp2.innerHTML = " " + this.soiltemp2 + "&deg;";
-      row47_sitrep.appendChild(soiltemp2);
-      table_sitrep.appendChild(row47_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp2 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.soiltemp3 == "1"){
-      var soiltemp3Icon = document.createElement("td");
-      soiltemp3Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp3Icon.innerHTML = "3";
-      row48_sitrep.appendChild(soiltemp3Icon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "3";
+      row_sitrep.appendChild(Icon);
 
-      var soiltemp3 = document.createElement("td");
-      soiltemp3.className = "popr";
-      soiltemp3.innerHTML = " " + this.soiltemp3 + "&deg;";
-      row48_sitrep.appendChild(soiltemp3);
-      table_sitrep.appendChild(row48_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp3 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.soiltemp4 == "1"){
-      var soiltemp4Icon = document.createElement("td");
-      soiltemp4Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp4Icon.innerHTML = "4";
-      row49_sitrep.appendChild(soiltemp4Icon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "4";
+      row_sitrep.appendChild(Icon);
 
-      var soiltemp4 = document.createElement("td");
-      soiltemp4.className = "popr";
-      soiltemp4.innerHTML = " " + this.soiltemp4 + "&deg;";
-      row49_sitrep.appendChild(soiltemp4);
-      table_sitrep.appendChild(row49_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp4 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.soiltemp5 == "1"){
-      var soiltemp5Icon = document.createElement("td");
-      soiltemp5Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp5Icon.innerHTML = "5";
-      row50_sitrep.appendChild(soiltemp5Icon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "5";
+      row_sitrep.appendChild(Icon);
 
-      var soiltemp5 = document.createElement("td");
-      soiltemp5.className = "popr";
-      soiltemp5.innerHTML = " " + this.soiltemp5 + "&deg;";
-      row50_sitrep.appendChild(soiltemp5);
-      table_sitrep.appendChild(row50_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp5 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.soiltemp6 == "1"){
-      var soiltemp6Icon = document.createElement("td");
-      soiltemp6Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp6Icon.innerHTML = "6";
-      row51_sitrep.appendChild(soiltemp6Icon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "6";
+      row_sitrep.appendChild(Icon);
 
-      var soiltemp6 = document.createElement("td");
-      soiltemp6.className = "popr";
-      soiltemp6.innerHTML = " " + this.soiltemp6 + "&deg;";
-      row51_sitrep.appendChild(soiltemp6);
-      table_sitrep.appendChild(row51_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp6 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.soiltemp7 == "1"){
-      var soiltemp7Icon = document.createElement("td");
-      soiltemp7Icon.className = "pop wi wi-thermometer-exterior";
-      soiltemp7Icon.innerHTML = "7";
-      row52_sitrep.appendChild(soiltemp7Icon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "7";
+      row_sitrep.appendChild(Icon);
 
-      var soiltemp7 = document.createElement("td");
-      soiltemp7.className = "popr";
-      soiltemp7.innerHTML = " " + this.soiltemp7 + "&deg;";
-      row52_sitrep.appendChild(soiltemp7);
-      table_sitrep.appendChild(row52_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp7 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-
-
-    // Versuch ohne fortlaufende Nummer in row
 
     if (this.config.soiltemp8 == "1"){
       row_sitrep = document.createElement("tr");

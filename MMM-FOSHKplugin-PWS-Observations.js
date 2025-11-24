@@ -1013,7 +1013,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
 
     // Versuch ohne fortlaufende Nummer in row
-    /*
+
     if (this.config.rainDay == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -1064,11 +1064,10 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(rainMonth);
       table_sitrep.appendChild(row_sitrep);
     }
-    */
+    Log.info('***********************************************************************************************************************');
 
 
-
-
+    /*
     // Array Test
     const items = [
       ["rainDay","pop wi wi-umbrella","d","mm"],
@@ -1101,7 +1100,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
         table_sitrep.appendChild(row_sitrep);
       }
     }
-
+    */
 
 
 

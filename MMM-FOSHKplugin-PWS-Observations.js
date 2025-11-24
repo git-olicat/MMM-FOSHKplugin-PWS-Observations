@@ -1080,7 +1080,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     ];
 
     for (let i = 0; i < items.length; i++) {
-      console.log(items[i][0]+" = "+this.eval(items[i][0]));
+      console.log('***********************************************************************************************************************');
+      //console.log(items[i][0]+" = "+this.eval(items[i][0]));
+      console.log('***********************************************************************************************************************');
       if (this.config.eval(items[i][0]) == "1"){
         var row_sitrep = document.createElement("tr");
         var Icon = document.createElement("td");

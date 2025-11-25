@@ -316,12 +316,13 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-raindrops";
+      Icon.innerHTML = "r";
       row_sitrep.appendChild(Icon);
 
       var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = "  " + this.rainRate + " " + "mmh";
+        Value.innerHTML = "  " + this.rainRate + " " + "mm/h";
       } else {
         Value.innerHTML = "  " +this.rainRate + " " + "\"ph";
       }
@@ -423,7 +424,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     if (this.config.piezoRate == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-umbrella";
+      Icon.className = "pop wi wi-raindrops";
       Icon.innerHTML = "r";
       row_sitrep.appendChild(Icon);
 

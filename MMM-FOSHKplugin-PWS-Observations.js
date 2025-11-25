@@ -181,7 +181,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     if (this.config.aqTime == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-lightning";
+      Icon.className = "pop wi wi-time-2";
       row_sitrep.appendChild(Icon);
 
       const aqTime = new Date(this.aqTime * 1000);
@@ -1396,7 +1396,20 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
   roundValue: function(temperature) {
     return parseFloat(temperature).toFixed(this.config.roundTmpDecs);
   },
-  
+
+  /* function(unixToDateTime)
+  *  converts timestamp to human readable text.
+  *
+  *  argument timestamp, locale.
+  *
+  *  return string - human readable time string.
+  */
+  unixToDateTime: function(given, locale) {
+    if (given >= 0 && given.toString().length <= 10) { given = given * 1000; } else { given = 0 };
+    given = new Date(given);
+    return given.toLocaleDateString(locale)+ " " + given.toLocaleTimeString(locale);
+  },
+
   /* function (socketNotificationReceived)
   *
   */

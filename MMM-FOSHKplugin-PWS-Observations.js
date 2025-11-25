@@ -186,7 +186,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
       const aqTime = new Date(this.aqTime * 1000);
       //aqTimeHuman = aqTime.toLocaleDateString(config.locale)+ " " + aqTime.toLocaleTimeString(config.locale);
-      aqTimeHuman = unixToDateTime(aqTime, config.locale);
+      aqTimeHuman = this.unixToDateTime(aqTime, config.locale);
       var Value = document.createElement("td");
       Value.className = "poplightningr";
       Value.innerHTML = " " + aqTimeHuman + "";

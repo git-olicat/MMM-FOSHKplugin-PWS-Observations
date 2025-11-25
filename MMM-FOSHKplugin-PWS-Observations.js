@@ -231,7 +231,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className = "popr";
       if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.windSpeed + " " + "Kmh";
+        Value.innerHTML = " " + this.windSpeed + " " + "kmh";
       } else {
         Value.innerHTML = " " + this.windSpeed + " " + "mph";
       }

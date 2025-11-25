@@ -70,7 +70,7 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					heatIndex: 1,
 					// new keys - choose whatever you want, but bear in mind the limited space
 					aqTime: 1,             // time of measurement
-					realtimeFrequency: 0   // interval
+					realtimeFrequency: 0,  // interval
 					indoorTemperature: 0,
 					indoorHumidity: 0,
 					temperature1: 0,

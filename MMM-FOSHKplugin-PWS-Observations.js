@@ -184,12 +184,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.className = "pop wi wi-time-2";
       row_sitrep.appendChild(Icon);
 
-      //const aqTime = new Date(this.aqTime * 1000);
-      //aqTimeHuman = this.unixToDateTime(aqTime, config.locale);
-      aqTimeHuman = this.unixToDateTime(this.aqTime, config.locale);
       var Value = document.createElement("td");
       Value.className = "poplightningr";
-      Value.innerHTML = " " + aqTimeHuman + "";
+      Value.innerHTML = " " + this.unixToDateTime(this.aqTime, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
@@ -979,14 +976,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.className = "pop wi wi-lightning";
       row_sitrep.appendChild(Icon);
 
-      //const lightningTime = new Date(this.lightning_time * 1000);
-      //lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
-      //lightningHuman = this.unixToDateTime(lightningTime, config.locale);
-      lightningHuman = this.unixToDateTime(this.lightning_time, config.locale);
-      
       var Value = document.createElement("td");
       Value.className = "poplightningr";
-      Value.innerHTML = " " + lightningHuman + "";
+      Value.innerHTML = " " + this.unixToDateTime(this.lightning_time, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }

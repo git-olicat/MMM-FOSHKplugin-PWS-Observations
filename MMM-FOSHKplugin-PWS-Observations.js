@@ -175,285 +175,219 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var table_sitrep = document.createElement("table");
     table_sitrep.className = "large1";
 
-    var row_sitrep = document.createElement("tr");
-    //row_sitrep.className = "pop";
-    console.log(row_sitrep);
-  
-    var row1_sitrep = document.createElement("tr");
-    //row1_sitrep.className = "pop";
-    console.log(row_sitrep);
-
-    var row2_sitrep = document.createElement("tr");
-    //row2_sitrep.className = "pop";
-  
-    var row3_sitrep = document.createElement("tr");
-    //row3_sitrep.className = "pop";
-
-    var row4_sitrep = document.createElement("tr");
-    //row4_sitrep.className = "pop";
-
-    var row5_sitrep = document.createElement("tr");
-    //row5_sitrep.className = "pop";
-  
-    var row6_sitrep = document.createElement("tr");
-    //row6_sitrep.className = "pop";
-
-    var row7_sitrep = document.createElement("tr");
-    //row7_sitrep.className = "pop";
-  
-    var row8_sitrep = document.createElement("tr");
-    //row8_sitrep.className = "pop";
-  
-    var row9_sitrep = document.createElement("tr");
-    //row9_sitrep.className = "pop";
-  
-    var row10_sitrep = document.createElement("tr");
-    //row10_sitrep.className = "pop";
-
-    var row11_sitrep = document.createElement("tr");
-    var row12_sitrep = document.createElement("tr");
-    var row13_sitrep = document.createElement("tr");
-    var row14_sitrep = document.createElement("tr");
-    var row15_sitrep = document.createElement("tr");
-    var row16_sitrep = document.createElement("tr");
-    var row17_sitrep = document.createElement("tr");
-    var row18_sitrep = document.createElement("tr");
-    var row19_sitrep = document.createElement("tr");
-    var row20_sitrep = document.createElement("tr");
-    var row21_sitrep = document.createElement("tr");
-    var row22_sitrep = document.createElement("tr");
-    var row23_sitrep = document.createElement("tr");
-    var row24_sitrep = document.createElement("tr");
-    var row25_sitrep = document.createElement("tr");
-    var row26_sitrep = document.createElement("tr");
-    var row27_sitrep = document.createElement("tr");
-    var row28_sitrep = document.createElement("tr");
-    var row29_sitrep = document.createElement("tr");
-    var row30_sitrep = document.createElement("tr");
-    var row31_sitrep = document.createElement("tr");
-    var row32_sitrep = document.createElement("tr");
-    var row33_sitrep = document.createElement("tr");
-    var row34_sitrep = document.createElement("tr");
-    var row35_sitrep = document.createElement("tr");
-    var row36_sitrep = document.createElement("tr");
-    var row37_sitrep = document.createElement("tr");
-    var row38_sitrep = document.createElement("tr");
-    var row39_sitrep = document.createElement("tr");
-    var row40_sitrep = document.createElement("tr");
-    var row41_sitrep = document.createElement("tr");
-    var row42_sitrep = document.createElement("tr");
-    var row43_sitrep = document.createElement("tr");
-    var row44_sitrep = document.createElement("tr");
-    var row45_sitrep = document.createElement("tr");
-    var row46_sitrep = document.createElement("tr");
-    var row47_sitrep = document.createElement("tr");
-    var row48_sitrep = document.createElement("tr");
-    var row49_sitrep = document.createElement("tr");
-    var row50_sitrep = document.createElement("tr");
-    var row51_sitrep = document.createElement("tr");
-    var row52_sitrep = document.createElement("tr");
-    var row53_sitrep = document.createElement("tr");
+    // Versuch ohne fortlaufende Nummer in row
 
     if (this.config.temperature == "1"){
-      var temperatureIcon = document.createElement("td");
-      temperatureIcon.className = "pop wi wi-thermometer";
-      temperatureIcon.innerHTML = "out";
-      row10_sitrep.appendChild(temperatureIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "out";
+      row_sitrep.appendChild(Icon);
 
-      var temperature = document.createElement("td");
-      temperature.className = "popr";
-      temperature.innerHTML = " " + this.temperature + "&deg;";
-      row10_sitrep.appendChild(temperature);
-      table_sitrep.appendChild(row10_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.humidity == "1"){
-      var HumidityIcon = document.createElement("td");
-      HumidityIcon.className = "pop wi wi-humidity lpad";
-      HumidityIcon.innerHTML = "out";
-      row2_sitrep.appendChild(HumidityIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "out";
+      row_sitrep.appendChild(Icon);
 
-      var HumidityTxt = document.createElement("td");
-      HumidityTxt.className = "popr";
-      HumidityTxt.innerHTML = this.Humidity + "%";
-      row2_sitrep.appendChild(HumidityTxt);
-      table_sitrep.appendChild(row2_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.Humidity + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-    
+
     if (this.config.pressure == "1"){
-      var pressureIcon = document.createElement("td");
-      pressureIcon.className = "pop wi wi-barometer";
-      row6_sitrep.appendChild(pressureIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-barometer";
+      row_sitrep.appendChild(Icon);
       
-      var pressure = document.createElement("td");
-      pressure.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        pressure.innerHTML = " " + this.pressure + "hPa";
+        Value.innerHTML = " " + this.pressure + " " + "hPa";
       } else {
-        pressure.innerHTML = " " + this.pressure + "inHg";
+        Value.innerHTML = " " + this.pressure + " " + "inHg";
       }
-      row6_sitrep.appendChild(pressure);
-      table_sitrep.appendChild(row6_sitrep);
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-    
+
     if (this.config.wind == "1"){
-      var windDirectionIcon = document.createElement("td");
-      windDirectionIcon.className = "pop wi wi-wind " + this.windDirection;
-      row_sitrep.appendChild(windDirectionIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-wind " + this.windDirection;
+      row_sitrep.appendChild(Icon);
   
-      var wind = document.createElement("td");
-      console.log(wind);
-      wind.className = "popr";
+      var Value = document.createElement("td");
+      Value.className = "popr";
       if (this.config.units == "metric") {
-        wind.innerHTML = " " + this.windSpeed + "Kmh";
+        Value.innerHTML = " " + this.windSpeed + " " + "Kmh";
       } else {
-        wind.innerHTML = " " + this.windSpeed + "mph";
+        Value.innerHTML = " " + this.windSpeed + " " + "mph";
       }
-      row_sitrep.appendChild(wind);
+      row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
   
-      var windGustIcon = document.createElement("td");
-      windGustIcon.className = "pop wi wi-strong-wind";// + this.windGust;
-      row1_sitrep.appendChild(windGustIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-strong-wind";
+      row_sitrep.appendChild(Icon);
   
-      var windGust = document.createElement("td");
-      windGust.className = "popr";
+      var Value = document.createElement("td");
+      Value.className = "popr";
       if (this.config.units == "metric") {
-        windGust.innerHTML = " " + this.windGust + "kmh";
+        Value.innerHTML = " " + this.windGust + " " + "kmh";
       } else {
-        windGust.innerHTML = " " + this.windGust + "mph";
+        Value.innerHTML = " " + this.windGust + " " + "mph";
       }
-      row1_sitrep.appendChild(windGust);
-      table_sitrep.appendChild(row1_sitrep);
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.solarRadiation == "1"){
-      var solarRadiationIcon = document.createElement("td");
-      solarRadiationIcon.className = "pop wi wi-hot lpad";
-      solarRadiationIcon.innerHTML = "SR";
-      row11_sitrep.appendChild(solarRadiationIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-hot lpad";
+      Icon.innerHTML = "SR";
+      row_sitrep.appendChild(Icon);
 
-      var solarRadiationTxt = document.createElement("td");
-      solarRadiationTxt.className = "popr";
-      solarRadiationTxt.innerHTML = this.solarRadiation + "W/m²";
-      row11_sitrep.appendChild(solarRadiationTxt);
-      table_sitrep.appendChild(row11_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.solarRadiation + " " + "W/m²";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.UV == "1"){
-      var UVIcon = document.createElement("td");
-      UVIcon.className = "pop wi wi-hot";
-      UVIcon.innerHTML = "UV";
-      row3_sitrep.appendChild(UVIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-hot";
+      Icon.innerHTML = "UV";
+      row_sitrep.appendChild(Icon);
     
-      var UVTxt = document.createElement("td");
-      UVTxt.className ="popr";
-      UVTxt.innerHTML = this.UV;
-      row3_sitrep.appendChild(UVTxt);
-      table_sitrep.appendChild(row3_sitrep);
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      Value.innerHTML = this.UV;
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-  
+
     if (this.config.rain == "1"){
-      var RainIcon = document.createElement("td");
-      RainIcon.className = "pop wi wi-umbrella";
-      row4_sitrep.appendChild(RainIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      row_sitrep.appendChild(Icon);
 
-      var rainfall = document.createElement("td");
-      rainfall.className ="popr";
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        rainfall.innerHTML = " " + this.rainfall + "mm";
+        Value.innerHTML = " " + this.rainfall + " " + "mm";
       } else {
-        rainfall.innerHTML = " " + this.rainfall + "\"";
+        Value.innerHTML = " " + this.rainfall + " " + "\"";
       }
-      row4_sitrep.appendChild(rainfall);
-      table_sitrep.appendChild(row4_sitrep);
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-    
-    if (this.config.rainRate == "1"){
-      var rainRateIcon = document.createElement("td");
-      rainRateIcon.className = "pop wi wi-raindrops";
-      row5_sitrep.appendChild(rainRateIcon);
 
-      var rainRate = document.createElement("td");
-      rainRate.className ="popr";
+    if (this.config.rainRate == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-raindrops";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
       if (this.config.units == "metric") {
-        rainRate.innerHTML = "  " + this.rainRate + "mmh";
+        Value.innerHTML = "  " + this.rainRate + " " + "mmh";
       } else {
-        rainRate.innerHTML = "  " +this.rainRate + "\"ph"; //this.rainRate
+        Value.innerHTML = "  " +this.rainRate + " " + "\"ph";
       }
-      row5_sitrep.appendChild(rainRate);
-      table_sitrep.appendChild(row5_sitrep);
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.dewPoint == "1"){
-      var dewPointIcon = document.createElement("td");
-      dewPointIcon.className ="pop";
-      dewPointIcon.innerHTML = "DP";
-      row7_sitrep.appendChild(dewPointIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className ="pop";
+      Icon.innerHTML = "DP";
+      row_sitrep.appendChild(Icon);
 
-      var dewPoint = document.createElement("td");
-      dewPoint.className ="popr";
-      dewPoint.innerHTML = " " + this.dewpt + "&deg;";
-      row7_sitrep.appendChild(dewPoint);
-      table_sitrep.appendChild(row7_sitrep);
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      Value.innerHTML = " " + this.dewpt + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.windChill == "1"){
-      var windChillIcon = document.createElement("td");
-      windChillIcon.className = "pop";
-      windChillIcon.innerHTML = "WC";
-      row8_sitrep.appendChild(windChillIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "WC";
+      row_sitrep.appendChild(Icon);
 
-      var windChill = document.createElement("td");
-      windChill.className ="popr";
-      windChill.innerHTML = " " + this.windChill + "&deg;";
-      row8_sitrep.appendChild(windChill);
-      table_sitrep.appendChild(row8_sitrep);
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      Value.innerHTML = " " + this.windChill + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.heatIndex == "1"){
-      var heatIndexIcon = document.createElement("td");
-      heatIndexIcon.className = "pop";
-      heatIndexIcon.innerHTML = "HI";
-      row9_sitrep.appendChild(heatIndexIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "HI";
+      row_sitrep.appendChild(Icon);
 
-      var heatIndex = document.createElement("td");
-      heatIndex.className = "popr";
-      heatIndex.innerHTML = " " + this.heatIndex + "&deg;";
-      row9_sitrep.appendChild(heatIndex);
-      table_sitrep.appendChild(row9_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.heatIndex + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.indoorTemperature == "1"){
-      var indoorTemperatureIcon = document.createElement("td");
-      indoorTemperatureIcon.className = "pop wi wi-thermometer";
-      indoorTemperatureIcon.innerHTML = "in";
-      row13_sitrep.appendChild(indoorTemperatureIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "in";
+      row_sitrep.appendChild(Icon);
 
-      var indoorTemperature = document.createElement("td");
-      indoorTemperature.className = "popr";
-      indoorTemperature.innerHTML = " " + this.indoorTemperature + "&deg;";
-      row13_sitrep.appendChild(indoorTemperature);
-      table_sitrep.appendChild(row13_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.indoorTemperature + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
     if (this.config.indoorHumidity == "1"){
-      var indoorHumidityIcon = document.createElement("td");
-      indoorHumidityIcon.className = "pop wi wi-humidity lpad";
-      indoorHumidityIcon.innerHTML = "in";
-      row12_sitrep.appendChild(indoorHumidityIcon);
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "in";
+      row_sitrep.appendChild(Icon);
 
-      var indoorHumidityTxt = document.createElement("td");
-      indoorHumidityTxt.className = "popr";
-      indoorHumidityTxt.innerHTML = this.indoorHumidity + "%";
-      row12_sitrep.appendChild(indoorHumidityTxt);
-      table_sitrep.appendChild(row12_sitrep);
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.indoorHumidity + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
 
-
-    // Versuch ohne fortlaufende Nummer in row
-
-
+    // 
+    
     if (this.config.temperature1 == "1"){
       row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");

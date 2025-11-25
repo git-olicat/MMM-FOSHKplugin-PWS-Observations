@@ -57,7 +57,7 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					rainYear: 0,           // rain yearly = rain = precipTotal
 					rain24: 0,             // rain last 24h
 					rainEvent: 0,          // rain this rain event
-          piezoRate: 0,          // piezo rain rate
+					piezoRate: 0,          // piezo rain rate
 					piezoDay: 0,           // piezo rain daily
 					piezoWeek: 0,          // piezo rain weekly
 					piezoMonth: 0,         // piezo rain monthly

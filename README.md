@@ -49,8 +49,22 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					wind: 1,
 					solarRadiation: 1,
 					UV: 1,
-					rain: 1,
-					rainRate: 1,
+					rain: 1,               // same as rainYear
+					rainRate: 1,           // rain rate
+					rainDay: 0,            // rain daily
+					rainWeek: 0,           // rain weekly
+					rainMonth: 0,          // rain monthly
+					rainYear: 0,           // rain yearly = rain = precipTotal
+					rain24: 0,             // rain last 24h
+					rainEvent: 0,          // rain this rain event
+          piezoRate: 0,          // piezo rain rate
+					piezoDay: 0,           // piezo rain daily
+					piezoWeek: 0,          // piezo rain weekly
+					piezoMonth: 0,         // piezo rain monthly
+					piezoYear: 0,          // piezo rain yearly = rain = precipTotal
+					piezo24: 0,            // piezo rain last 24h
+					piezoEvent: 0,         // piezo rain this rain event
+					isRaining: 0,          // piezo rain state
 					dewPoint: 1,
 					windChill: 1,
 					heatIndex: 1,
@@ -102,19 +116,6 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					lightning_day: 0,
 					lightning_distance: 0,
 					lightning_time: 0,
-					rainDay: 0,            // rain daily
-					rainWeek: 0,           // rain weekly
-					rainMonth: 0,          // rain monthly
-					rainYear: 0,           // rain yearly = rain = precipTotal
-					rain24: 0,             // rain last 24h
-					rainEvent: 0,          // rain this rain event
-					piezoDay: 0,           // piezo rain daily
-					piezoWeek: 0,          // piezo rain weekly
-					piezoMonth: 0,         // piezo rain monthly
-					piezoYear: 0,          // piezo rain yearly = rain = precipTotal
-					piezo24: 0,            // piezo rain last 24h
-					piezoEvent: 0,         // piezo rain this rain event
-					isRaining: 0,          // piezo rain state
 				}
 			},
 

@@ -96,7 +96,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     isRaining: 0,          // piezo rain state
 
   },
-    
   // Define required translations.
   getTranslations: function() {
     return {
@@ -225,8 +224,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-barometer";
       row_sitrep.appendChild(Icon);
-      
-      var Value = document.createElement("td");
+        var Value = document.createElement("td");
       Value.className ="popr";
       if (this.config.units == "metric") {
         Value.innerHTML = " " + this.pressure + " " + "hPa";
@@ -289,7 +287,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       Icon.className = "pop wi wi-hot";
       Icon.innerHTML = "UV";
       row_sitrep.appendChild(Icon);
-    
       var Value = document.createElement("td");
       Value.className ="popr";
       Value.innerHTML = this.UV;
@@ -327,659 +324,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       } else {
         Value.innerHTML = "  " +this.rainRate + " " + "\"ph";
       }
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.dewPoint == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className ="pop";
-      Icon.innerHTML = "DP";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className ="popr";
-      Value.innerHTML = " " + this.dewpt + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.windChill == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "WC";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className ="popr";
-      Value.innerHTML = " " + this.windChill + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.heatIndex == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "HI";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.heatIndex + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.indoorTemperature == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "in";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.indoorTemperature + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.indoorHumidity == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "in";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.indoorHumidity + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    // 
-    
-    if (this.config.temperature1 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "1";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature1 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity1 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "1";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity1 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature2 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "2";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature2 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity2 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "2";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity2 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature3 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "3";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature3 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity3 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "3";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity3 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature4 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "4";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature4 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity4 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "4";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity4 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature5 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "5";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature5 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity5 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "5";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity5 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature6 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "6";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature6 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity6 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "6";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity6 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature7 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "7";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature7 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity7 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "7";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity7 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.temperature8 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer";
-      Icon.innerHTML = "8";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.temperature8 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.Humidity8 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-humidity lpad";
-      Icon.innerHTML = "8";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.Humidity8 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soilmoisture == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM1";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture2 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM2";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture2 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture3 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM3";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture3 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture4 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM4";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture4 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture5 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM5";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture5 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture6 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM6";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture6 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture7 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM7";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture7 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture8 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM8";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture8 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture9 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM9";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture9 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture10 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM10";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture10 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture11 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM11";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture11 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture12 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM12";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture12 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture13 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM13";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture13 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture14 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM14";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture14 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-    if (this.config.soilmoisture15 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM15";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture15 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soilmoisture16 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop";
-      Icon.innerHTML = "SM16";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = this.soilmoisture16 + " " + "%";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "1";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp2 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "2";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp2 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp3 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "3";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp3 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp4 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "4";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp4 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp5 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "5";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp5 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp6 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "6";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp6 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp7 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "7";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp7 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.soiltemp8 == "1"){
-      row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-thermometer-exterior";
-      Icon.innerHTML = "8";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.soiltemp8 + " " + "&deg;";
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.lightning_day == "1"){
-      var row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-lightning";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.lightning_day;
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.lightning_distance == "1"){
-      var row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-lightning";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "popr";
-      if (this.config.units == "metric") {
-        Value.innerHTML = " " + this.lightning_distance + "km";
-      } else {
-        Value.innerHTML = " " + this.lightning_distance + "mi";
-      }
-      row_sitrep.appendChild(Value);
-      table_sitrep.appendChild(row_sitrep);
-    }
-
-    if (this.config.lightning_time == "1"){
-      var row_sitrep = document.createElement("tr");
-      var Icon = document.createElement("td");
-      Icon.className = "pop wi wi-lightning";
-      row_sitrep.appendChild(Icon);
-
-      var Value = document.createElement("td");
-      Value.className = "poplightningr";
-      Value.innerHTML = " " + this.unixToDateTime(this.lightning_time, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
@@ -1174,8 +518,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
       var Value = document.createElement("td");
       Value.className ="popr";
-      
-      if (this.isRaining === "0") {
+        if (this.isRaining === "0") {
         if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
       } else {
       }
@@ -1184,50 +527,678 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row_sitrep);
     }
 
+    if (this.config.dewPoint == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className ="pop";
+      Icon.innerHTML = "DP";
+      row_sitrep.appendChild(Icon);
 
-
-
-
-
-
-    /*
-    // Array Test
-    const items = [
-      ["rainDay","pop wi wi-umbrella","d","mm"],
-      ["rainWeek","pop wi wi-umbrella","w","mm"],
-      ["rainMonth","pop wi wi-umbrella","m","mm"],
-      ["rainYear","pop wi wi-umbrella","y","mm"],
-      ["rain24","pop wi wi-umbrella","24","mm"],
-      ["rainEvent","pop wi wi-umbrella","e","mm"],
-    ];
-
-    for (let i = 0; i < items.length; i++) {
-      Log.info('***********************************************************************************************************************');
-      //console.log(items[i][0]+" = "+this.eval(items[i][0]));
-      Log.info('***********************************************************************************************************************');
-      if (this.config.eval(items[i][0]) == "1"){
-        var row_sitrep = document.createElement("tr");
-        var Icon = document.createElement("td");
-        Icon.className = items[i][1];
-        Icon.innerHTML = items[i][2];
-        row_sitrep.appendChild(Icon);
-
-        var value = document.createElement("td");
-        value.className ="popr";
-        if (this.config.units == "metric") {
-          value.innerHTML = " " + this.eval(items[i][0])  + "mm";
-        } else {
-          value.innerHTML = " " + this.eval(items[i][0]) + "\"";
-        }
-        row_sitrep.appendChild(value);
-        table_sitrep.appendChild(row_sitrep);
-      }
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      Value.innerHTML = " " + this.dewpt + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
     }
-    */
 
+    if (this.config.windChill == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "WC";
+      row_sitrep.appendChild(Icon);
 
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      Value.innerHTML = " " + this.windChill + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
 
+    if (this.config.heatIndex == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "HI";
+      row_sitrep.appendChild(Icon);
 
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.heatIndex + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.indoorTemperature == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "in";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.indoorTemperature + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.indoorHumidity == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "in";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.indoorHumidity + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature1 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "1";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature1 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity1 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "1";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity1 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature2 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "2";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature2 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity2 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "2";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity2 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature3 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "3";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature3 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity3 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "3";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity3 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature4 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "4";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature4 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity4 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "4";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity4 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature5 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "5";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature5 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity5 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "5";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity5 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature6 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "6";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature6 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity6 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "6";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity6 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature7 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "7";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature7 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity7 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "7";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity7 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.temperature8 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer";
+      Icon.innerHTML = "8";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.temperature8 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.Humidity8 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-humidity lpad";
+      Icon.innerHTML = "8";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.Humidity8 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM1";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture2 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM2";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture2 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture3 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM3";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture3 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture4 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM4";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture4 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture5 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM5";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture5 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture6 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM6";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture6 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture7 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM7";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture7 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture8 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM8";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture8 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture9 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM9";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture9 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture10 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM10";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture10 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture11 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM11";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture11 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture12 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM12";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture12 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture13 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM13";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture13 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture14 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM14";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture14 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture15 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM15";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture15 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soilmoisture16 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop";
+      Icon.innerHTML = "SM16";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.soilmoisture16 + " " + "%";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "1";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp2 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "2";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp2 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp3 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "3";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp3 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp4 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "4";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp4 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp5 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "5";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp5 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp6 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "6";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp6 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp7 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "7";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp7 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.soiltemp8 == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-thermometer-exterior";
+      Icon.innerHTML = "8";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.soiltemp8 + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.lightning_day == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.lightning_day;
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.lightning_distance == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.lightning_distance + "km";
+      } else {
+        Value.innerHTML = " " + this.lightning_distance + "mi";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.lightning_time == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "poplightningr";
+      Value.innerHTML = " " + this.unixToDateTime(this.lightning_time, config.locale) + "";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
 
 
     console.log("table" + table_sitrep);
@@ -1251,7 +1222,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.UV = data.observations[0].UV;
 
     this.temperature = data.observations[0][this.config.units].temp;
-    console.log(this.config.units + " " + this.temperature)
 
     this.heatIndex = data.observations[0][this.config.units].heatIndex;
     this.dewpt = data.observations[0][this.config.units].dewpt;

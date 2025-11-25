@@ -184,7 +184,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(Icon);
 
       var Value = document.createElement("td");
-      Value.className = "popr";
+      Value.className = "poptimer";
       Value.innerHTML = " " + this.unixToDateTime(this.aqTime, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
@@ -1225,7 +1225,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(Icon);
 
       var Value = document.createElement("td");
-      Value.className = "popr";
+      Value.className = "poptimer";
       Value.innerHTML = " " + this.unixToDateTime(this.lightning_time, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);

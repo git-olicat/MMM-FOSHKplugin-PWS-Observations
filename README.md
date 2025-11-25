@@ -43,6 +43,8 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					sysstat: 0,
 					debug: 1,
 					currentweather: 1,
+					aqTime: 1,             // time of measurement
+					realtimeFrequency: 0,  // interval
 					temperature: 1,
 					humidity: 1,
 					pressure: 1,
@@ -69,8 +71,6 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					windChill: 1,
 					heatIndex: 1,
 					// new keys - choose whatever you want, but bear in mind the limited space
-					aqTime: 1,             // time of measurement
-					realtimeFrequency: 0,  // interval
 					indoorTemperature: 0,
 					indoorHumidity: 0,
 					temperature1: 0,

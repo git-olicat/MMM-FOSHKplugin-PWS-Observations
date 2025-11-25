@@ -33,7 +33,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     // Oliver 19.11.25
     aqTime: 1,             // time of measurement
-    realtimeFrequency: 0   // interval
+    realtimeFrequency: 0,  // interval
     indoorTemperature: 0,
     indoorHumidity: 0,
     temperature1: 0,       // WH31 channel #1

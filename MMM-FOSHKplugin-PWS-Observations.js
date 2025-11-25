@@ -177,6 +177,22 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     // Versuch ohne fortlaufende Nummer in row
 
+    if (this.config.aqTime == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-lightning";
+      row_sitrep.appendChild(Icon);
+
+      const aqTime = new Date(this.aqTime * 1000);
+      aqTimeHuman = aqTime.toLocaleDateString(config.locale)+ " " + aqTime.toLocaleTimeString(config.locale);
+  
+      var Value = document.createElement("td");
+      Value.className = "poplightningr";
+      Value.innerHTML = " " + aqTimeHuman + "";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
     if (this.config.temperature == "1"){
       row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -1231,6 +1247,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
   */
 
   processWeather: function(data) {
+  
+    this.aqTime = data.observations[0].aqTime;
   
     this.windDirection = this.deg2Cardinal(data.observations[0].winddir);
     this.Humidity = data.observations[0].humidity;

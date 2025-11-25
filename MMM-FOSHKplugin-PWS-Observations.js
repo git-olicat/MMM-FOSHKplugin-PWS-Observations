@@ -177,8 +177,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     var table_sitrep = document.createElement("table");
     table_sitrep.className = "large1";
 
-    // Versuch ohne fortlaufende Nummer in row
-
     if (this.config.aqTime == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -188,6 +186,19 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className = "poplightningr";
       Value.innerHTML = " " + this.unixToDateTime(this.aqTime, config.locale) + "";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.realtimeFrequency == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-time-2";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "poplightningr";
+      Value.innerHTML = " " + this.realtimeFrequency + " " + "s";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }

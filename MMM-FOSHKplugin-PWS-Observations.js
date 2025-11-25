@@ -87,6 +87,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     rain24: 0,             // rain last 24h
     rainEvent: 0,          // rain this rain event
 
+    piezoRate: 0,          // piezo rain rate
     piezoDay: 0,           // piezo rain daily
     piezoWeek: 0,          // piezo rain weekly
     piezoMonth: 0,         // piezo rain monthly
@@ -419,6 +420,24 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     }
 
     // WS90
+    if (this.config.piezoRate == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-umbrella";
+      Icon.innerHTML = "r";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.piezoRain + " " + "mm/h";
+      } else {
+        Value.innerHTML = " " + this.piezoRain + " " + "in/h";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
     if (this.config.piezoDay == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -1292,6 +1311,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.rainYear = data.observations[0][this.config.units].precipYear;
     this.rainEvent = data.observations[0][this.config.units].precipEvent;
 
+    this.piezoRate = data.observations[0][this.config.units].piezoRate;
     this.piezoDay = data.observations[0][this.config.units].piezoDay;
     this.piezoWeek = data.observations[0][this.config.units].piezoWeek;
     this.piezoMonth = data.observations[0][this.config.units].piezoMonth;

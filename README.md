@@ -55,6 +55,8 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					windChill: 1,
 					heatIndex: 1,
 					// new keys - choose whatever you want, but bear in mind the limited space
+					aqTime: 1,             // time of measurement
+					realtimeFrequency: 0   // interval
 					indoorTemperature: 0,
 					indoorHumidity: 0,
 					temperature1: 0,
@@ -100,6 +102,19 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					lightning_day: 0,
 					lightning_distance: 0,
 					lightning_time: 0,
+					rainDay: 0,            // rain daily
+					rainWeek: 0,           // rain weekly
+					rainMonth: 0,          // rain monthly
+					rainYear: 0,           // rain yearly = rain = precipTotal
+					rain24: 0,             // rain last 24h
+					rainEvent: 0,          // rain this rain event
+					piezoDay: 0,           // piezo rain daily
+					piezoWeek: 0,          // piezo rain weekly
+					piezoMonth: 0,         // piezo rain monthly
+					piezoYear: 0,          // piezo rain yearly = rain = precipTotal
+					piezo24: 0,            // piezo rain last 24h
+					piezoEvent: 0,         // piezo rain this rain event
+					isRaining: 0,          // piezo rain state
 				}
 			},
 

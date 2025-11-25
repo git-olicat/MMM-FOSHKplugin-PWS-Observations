@@ -185,7 +185,6 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(Icon);
 
       const aqTime = new Date(this.aqTime * 1000);
-      //aqTimeHuman = aqTime.toLocaleDateString(config.locale)+ " " + aqTime.toLocaleTimeString(config.locale);
       aqTimeHuman = this.unixToDateTime(aqTime, config.locale);
       var Value = document.createElement("td");
       Value.className = "poplightningr";
@@ -980,8 +979,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(Icon);
 
       const lightningTime = new Date(this.lightning_time * 1000);
-      lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
-  
+      //lightningHuman = lightningTime.toLocaleDateString(config.locale)+ " " + lightningTime.toLocaleTimeString(config.locale);
+      lightningHuman = this.unixToDateTime(lightningTime, config.locale);
+
       var Value = document.createElement("td");
       Value.className = "poplightningr";
       Value.innerHTML = " " + lightningHuman + "";

@@ -191,14 +191,14 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     }
 
     if (this.config.realtimeFrequency == "1"){
-      var row_sitrep = document.createElement("tr");
+      row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-time-1";
+      Icon.innerHTML = "freq";
       row_sitrep.appendChild(Icon);
-
       var Value = document.createElement("td");
-      Value.className = "popr";
-      Value.innerHTML = " " + this.realtimeFrequency + " " + "s";
+      Value.className ="popr";
+      Value.innerHTML = this.realtimeFrequency + " " + "s";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }

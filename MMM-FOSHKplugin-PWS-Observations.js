@@ -1240,7 +1240,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     if (this.config.leakAlarm1 == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
-      Icon.className = "pop ti-alert";
+      Icon.className = "pop ti ti-alert";
       Icon.innerHTML = "1";
       row_sitrep.appendChild(Icon);
 
@@ -1258,7 +1258,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     if (this.config.leakAlarm2 == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
-      Icon.className = "pop ti-alert";
+      Icon.className = "pop ti ti-alert";
       Icon.innerHTML = "2";
       row_sitrep.appendChild(Icon);
 
@@ -1276,7 +1276,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     if (this.config.leakAlarm3 == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
-      Icon.className = "pop ti-alert";
+      Icon.className = "pop ti ti-alert";
       Icon.innerHTML = "3";
       row_sitrep.appendChild(Icon);
 
@@ -1294,7 +1294,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     if (this.config.leakAlarm4 == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
-      Icon.className = "pop ti-alert";
+      Icon.className = "pop ti ti-alert";
       Icon.innerHTML = "4";
       row_sitrep.appendChild(Icon);
 

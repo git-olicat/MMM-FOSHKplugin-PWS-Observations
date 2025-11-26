@@ -338,7 +338,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(Icon);
       var Value = document.createElement("td");
       Value.className ="popr";
-      Value.innerHTML = this.sunHours;
+      Value.innerHTML = this.sunHours + " " + "h";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }

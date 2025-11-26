@@ -50,9 +50,9 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					pressure: 1,
 					wind: 1,
 					windRun: 0,
-					sunHours: 0,
 					solarRadiation: 1,
 					UV: 1,
+					sunHours: 0,
 					rain: 1,               // same as rainYear
 					rainRate: 1,           // rain rate
 					rainDay: 0,            // rain daily
@@ -72,7 +72,6 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					dewPoint: 1,
 					windChill: 1,
 					heatIndex: 1,
-					// new keys - choose whatever you want, but bear in mind the limited space
 					indoorTemperature: 0,
 					indoorHumidity: 0,
 					temperature1: 0,

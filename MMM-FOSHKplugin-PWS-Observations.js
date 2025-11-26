@@ -334,7 +334,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
       Icon.className = "pop wi wi-day-sunny";
-      Icon.innerHTML = "";
+      Icon.innerHTML = "∑";
       row_sitrep.appendChild(Icon);
       var Value = document.createElement("td");
       Value.className ="popr";

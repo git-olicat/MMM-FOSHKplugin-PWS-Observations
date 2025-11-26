@@ -549,11 +549,11 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
       var Value = document.createElement("td");
       Value.className ="popr";
-        if (this.isRaining === "0") {
+      if (this.isRaining === "0") {
         if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
       } else {
-      }
         if (config.language == "de") { Value.innerHTML = "nein"; } else { Value.innerHTML = "no"; }
+      }
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
@@ -1231,6 +1231,79 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row_sitrep);
     }
 
+    // leakAlarm
+    if (this.config.leakAlarm1 == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop ti-alert";
+      Icon.innerHTML = "1";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.leakAlarm1 === "0") {
+        if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
+      } else {
+        if (config.language == "de") { Value.innerHTML = "nein"; } else { Value.innerHTML = "no"; }
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.leakAlarm2 == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop ti-alert";
+      Icon.innerHTML = "2";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.leakAlarm2 === "0") {
+        if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
+      } else {
+        if (config.language == "de") { Value.innerHTML = "nein"; } else { Value.innerHTML = "no"; }
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.leakAlarm3 == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop ti-alert";
+      Icon.innerHTML = "3";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.leakAlarm3 === "0") {
+        if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
+      } else {
+        if (config.language == "de") { Value.innerHTML = "nein"; } else { Value.innerHTML = "no"; }
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.leakAlarm4 == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop ti-alert";
+      Icon.innerHTML = "4";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.leakAlarm4 === "0") {
+        if (config.language == "de") { Value.innerHTML = "ja"; } else { Value.innerHTML = "yes"; }
+      } else {
+        if (config.language == "de") { Value.innerHTML = "nein"; } else { Value.innerHTML = "no"; }
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
     console.log("table" + table_sitrep);
     wrapper.appendChild(table_sitrep);
     console.log(wrapper);
@@ -1332,6 +1405,11 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.isRaining = data.observations[0].isRaining;
 
     this.realtimeFrequency = data.observations[0].realtimeFrequency;
+
+    this.leakAlarm1 = data.observations[0].leakAlarm1;
+    this.leakAlarm2 = data.observations[0].leakAlarm2;
+    this.leakAlarm3 = data.observations[0].leakAlarm3;
+    this.leakAlarm4 = data.observations[0].leakAlarm4;
 
     this.loaded = true;
     this.updateDom(this.config.animationSpeed);

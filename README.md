@@ -49,6 +49,8 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					humidity: 1,
 					pressure: 1,
 					wind: 1,
+					windRun: 0,
+					sunHours: 0,
 					solarRadiation: 1,
 					UV: 1,
 					rain: 1,               // same as rainYear

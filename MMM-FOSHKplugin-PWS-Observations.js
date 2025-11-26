@@ -96,6 +96,11 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     piezoEvent: 0,         // piezo rain this rain event
     isRaining: 0,          // piezo rain state
 
+    leakAlarm1: 0,         // leakage sensor WH55 #1
+    leakAlarm2: 0,         // leakage sensor WH55 #1
+    leakAlarm3: 0,         // leakage sensor WH55 #1
+    leakAlarm4: 0,         // leakage sensor WH55 #1
+
   },
   // Define required translations.
   getTranslations: function() {

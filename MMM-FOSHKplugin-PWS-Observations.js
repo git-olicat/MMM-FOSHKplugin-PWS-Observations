@@ -1449,7 +1449,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.leakAlarm4 = data.observations[0].leakAlarm4;
 
     this.sunHours = data.observations[0].sunHours;
-    this.windrun = data.observations[0][this.config.units].windRun;
+    this.windRun = data.observations[0][this.config.units].windRun;
 
     this.loaded = true;
     this.updateDom(this.config.animationSpeed);

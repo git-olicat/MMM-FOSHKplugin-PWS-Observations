@@ -23,6 +23,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     humidity: 1,
     pressure: 1,
     wind: 1,  //1 displays the parameters 0 hides it
+    windRun: 0,
+    sunHours: 0,
     solarRadiation: 0,
     UV: 0,
     rain: 1,    // precipTotal = precipYear
@@ -284,6 +286,23 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row_sitrep);
     }
 
+    if (this.config.windRun == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-windy";
+      Icon.innerHTML = "∑";
+      row_sitrep.appendChild(Icon);
+        var Value = document.createElement("td");
+      Value.className ="popr";
+      if (this.config.units == "metric") {
+        Value.innerHTML = " " + this.windRun + " " + "km";
+      } else {
+        Value.innerHTML = " " + this.windRun + " " + "mi";
+      }
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
     if (this.config.solarRadiation == "1"){
       row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -307,6 +326,19 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       var Value = document.createElement("td");
       Value.className ="popr";
       Value.innerHTML = this.UV;
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.sunHours == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-day-sunny";
+      Icon.innerHTML = "";
+      row_sitrep.appendChild(Icon);
+      var Value = document.createElement("td");
+      Value.className ="popr";
+      Value.innerHTML = this.sunHours;
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
@@ -1415,6 +1447,9 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.leakAlarm2 = data.observations[0].leakAlarm2;
     this.leakAlarm3 = data.observations[0].leakAlarm3;
     this.leakAlarm4 = data.observations[0].leakAlarm4;
+
+    this.sunHours = data.observations[0].sunHours;
+    this.windrun = data.observations[0][this.config.units].windRun;
 
     this.loaded = true;
     this.updateDom(this.config.animationSpeed);

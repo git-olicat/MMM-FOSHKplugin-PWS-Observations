@@ -113,9 +113,13 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					soiltemp6: 0,
 					soiltemp7: 0,
 					soiltemp8: 0,
-					lightning_day: 0,
-					lightning_distance: 0,
-					lightning_time: 0,
+					lightning_day: 0,		// lightning count WH57
+					lightning_distance: 0,		// lightning distance WH57
+					lightning_time: 0,		// last lightning WH57
+					leakAlarm1: 0,			// leakage sensor WH55 #1
+					leakAlarm2: 0,			// leakage sensor WH55 #2
+					leakAlarm3: 0,			// leakage sensor WH55 #3
+					leakAlarm4: 0,			// leakage sensor WH55 #4
 				}
 			},
 

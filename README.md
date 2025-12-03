@@ -121,10 +121,10 @@ Remember: apiBase is mandatory and should contain the FOSHKplugin http URL (e.g.
 					leakAlarm2: 0,			// leakage sensor WH55 #2
 					leakAlarm3: 0,			// leakage sensor WH55 #3
 					leakAlarm4: 0,			// leakage sensor WH55 #4
-					sunRise: 0,			// sunrise time
-					sunSet: 0,			// sunset time
+					sunRise: 0,				// sunrise time
+					sunSet: 0,				// sunset time
 					sunHeight: 0,			// sun  height
-					sunDir: 0,			// sun direction
+					sunDir: 0,				// sun direction
 					theomaxSR: 0,			// theoretical max. solarradiation
 				}
 			},

@@ -1525,13 +1525,11 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     this.sunHours = data.observations[0].sunHours;
     this.windRun = data.observations[0][this.config.units].windRun;
 
-    /*
     this.sunRise = data.observations[0].sunRise;
     this.sunSet = data.observations[0].sunSet;
     this.sunHeight = data.observations[0].sunHeight;
     this.sunDir: = data.observations[0].sunDir;
     this.theomaxSR = data.observations[0].theomaxSR;
-    */
 
     this.loaded = true;
     this.updateDom(this.config.animationSpeed);

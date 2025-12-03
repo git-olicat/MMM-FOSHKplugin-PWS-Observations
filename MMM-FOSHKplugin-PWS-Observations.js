@@ -1347,6 +1347,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row_sitrep);
     }
 
+    /*
+
     if (this.config.sunRise == "1"){
       var row_sitrep = document.createElement("tr");
       var Icon = document.createElement("td");
@@ -1412,6 +1414,8 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
+
+    */
 
     console.log("table" + table_sitrep);
     wrapper.appendChild(table_sitrep);

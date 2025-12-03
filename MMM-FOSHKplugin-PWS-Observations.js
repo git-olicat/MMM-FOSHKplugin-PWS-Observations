@@ -103,13 +103,11 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     leakAlarm3: 0,         // leakage sensor WH55 #1
     leakAlarm4: 0,         // leakage sensor WH55 #1
 
-    /*
     sunRise: 0,            // sunrise timestamp
     sunSet: 0,             // sunset timestamp
     sunHeight: 0,          // sun height in °
     sunDir: 0,             // sun direction in °
     theomaxSR: 0,          // theoretical max solarradiation in W/m²
-    */
 
   },
   // Define required translations.

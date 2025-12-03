@@ -103,6 +103,12 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
     leakAlarm3: 0,         // leakage sensor WH55 #1
     leakAlarm4: 0,         // leakage sensor WH55 #1
 
+    sunRise: 0,            // sunrise timestamp
+    sunSet: 0,             // sunset timestamp
+    sunHeight: 0,          // sun height in °
+    sunDir: 0,             // sun direction in °
+    theomaxSR: 0,          // theoretical max solarradiation in W/m²
+    
   },
   // Define required translations.
   getTranslations: function() {
@@ -1341,6 +1347,72 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
       table_sitrep.appendChild(row_sitrep);
     }
 
+    if (this.config.sunRise == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-sunrise";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "poptimer";
+      Value.innerHTML = " " + this.unixToDateTime(this.sunRise, config.locale) + "";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.sunSet == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-sunset";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "poptimer";
+      Value.innerHTML = " " + this.unixToDateTime(this.sunSet, config.locale) + "";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.sunHeight == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-horizon-alt";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.sunHeight + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.sunDir == "1"){
+      var row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-horizon";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = " " + this.sunDir + " " + "&deg;";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
+    if (this.config.theomaxSR == "1"){
+      row_sitrep = document.createElement("tr");
+      var Icon = document.createElement("td");
+      Icon.className = "pop wi wi-hot lpad";
+      Icon.innerHTML = "th";
+      row_sitrep.appendChild(Icon);
+
+      var Value = document.createElement("td");
+      Value.className = "popr";
+      Value.innerHTML = this.theomaxSR + " " + "W/m²";
+      row_sitrep.appendChild(Value);
+      table_sitrep.appendChild(row_sitrep);
+    }
+
     console.log("table" + table_sitrep);
     wrapper.appendChild(table_sitrep);
     console.log(wrapper);
@@ -1450,6 +1522,12 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
     this.sunHours = data.observations[0].sunHours;
     this.windRun = data.observations[0][this.config.units].windRun;
+
+    this.sunRise = data.observations[0].sunRise;
+    this.sunSet = data.observations[0].sunSet;
+    this.sunHeight = data.observations[0].sunHeight;
+    this.sunDir: = data.observations[0].sunDir;
+    this.theomaxSR = data.observations[0].theomaxSR;
 
     this.loaded = true;
     this.updateDom(this.config.animationSpeed);

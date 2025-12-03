@@ -1355,7 +1355,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
       var Value = document.createElement("td");
       Value.className = "poptimer";
-      Value.innerHTML = " " + this.unixToDateTime(this.sunRise, config.locale) + "";
+      Value.innerHTML = " " + this.unixToTime(this.sunRise, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
@@ -1368,7 +1368,7 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
 
       var Value = document.createElement("td");
       Value.className = "poptimer";
-      Value.innerHTML = " " + this.unixToDateTime(this.sunSet, config.locale) + "";
+      Value.innerHTML = " " + this.unixToTime(this.sunSet, config.locale) + "";
       row_sitrep.appendChild(Value);
       table_sitrep.appendChild(row_sitrep);
     }
@@ -1587,6 +1587,19 @@ Module.register("MMM-FOSHKplugin-PWS-Observations", {
   */
   roundValue: function(temperature) {
     return parseFloat(temperature).toFixed(this.config.roundTmpDecs);
+  },
+
+  /* function(unixToTime)
+  *  converts timestamp to human readable time.
+  *
+  *  argument timestamp, locale.
+  *
+  *  return string - human readable time string.
+  */
+  unixToTime: function(given, locale) {
+    if (given >= 0 && given.toString().length <= 10) { given = given * 1000; } else { given = 0 };
+    given = new Date(given);
+    return given.toLocaleTimeString(locale);
   },
 
   /* function(unixToDateTime)
